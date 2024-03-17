@@ -1,106 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ML Group Project</title>
-    <style>
-        /* ... Your CSS ... */
-
-        .project-dropdown { 
-            float: left; 
-            overflow: hidden; 
-        }
-
-        .project-dropdown .dropbtn { 
-            font-size: 16px;  
-            border: none; 
-            outline: none; 
-            color: white; 
-            padding: 14px 20px; 
-            background-color: inherit; 
-            font-family: inherit; 
-            margin: 0; 
-        }
-
-        .project-dropdown-content { 
-            display: none; 
-            position: absolute; 
-            background-color: #f9f9f9; 
-            min-width: 160px; 
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
-            z-index: 1; 
-        }
-
-        .project-dropdown-content a { 
-            float: none; 
-            color: black; 
-            padding: 12px 16px; 
-            text-decoration: none; 
-            display: block; 
-            text-align: left; 
-        }
-
-        .project-dropdown-content a:hover { 
-            background-color: #ddd; 
-        }
-
-        .project-dropdown:hover .project-dropdown-content { 
-            display: block; 
-        }
-        
-        /* Additional */
-        .content { 
-            display: none;
-        }
-
-        .authors-section {
-            display: flex; 
-            flex-wrap: wrap; 
-            justify-content: space-around; 
-        }
-
-        .author {
-            width: 250px; 
-            margin: 20px;
-            text-align: center;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Website</title>
+<style>
+  body { font-family: Arial, sans-serif; }
+  .menu { overflow: hidden; background-color: #da2c00; }
+  .menu a { float: left; display: block; color: white; text-align: center; padding: 14px 20px; text-decoration: none; }
+  .dropdown { float: left; overflow: hidden; }
+  .dropdown .dropbtn { font-size: 16px; border: none; outline: none; color: white; padding: 14px 20px; background-color: inherit; font-family: inherit; margin: 0; }
+  .dropdown-content { display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; }
+  .dropdown-content a { float: none; color: black; padding: 12px 16px; text-decoration: none; display: block; text-align: left; }
+  .dropdown-content a:hover { background-color: #ddd; }
+  .dropdown:hover .dropdown-content { display: block; }
+</style>
 </head>
 <body>
-    <div class="menu">
-        <a href="#home">Home</a>
-        <a href="#meet-the-team">Meet the Team</a>
-        <div class="project-dropdown">
-            <button class="dropbtn">Project Description</button>
-            <div class="project-dropdown-content">
-                <a href="#">Research Question</a><div class="content"> </div>
-                <a href="#">Motivation</a> <div class="content">  </div> 
-                <a href="#">Background</a>  <div class="content">  </div> 
-                <a href="#">Prior and Existing Works</a> <div class="content"> 
-                    <a href="#">Papers</a>  <div class="content">  </div> 
-                    <a href="#">Tools / Apps</a><div class="content">  </div>  </div> 
-                <a href="#">Methodology</a> <div class="content">  </div> 
-                <a href="#">Results</a> <div class="content">  </div> 
-                <a href="#">Videos, Links to Repo, and Instructions</a> <div class="content"> </div> 
-            </div>
-        </div>
-    </div>
 
-    <section id="meet-the-team">
-        <h2>Meet the Team</h2>
-        <div class="authors-section">
-            <div class="author">
-                <img src="img/author1.png" alt="Author 1">
-                <h3>Leonardo</h3> 
-                <p>The leader. Leonardo is known for his strategic thinking and discipline.</p>
-            </div>
-            </div>
-    </section>
- 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script>
-       // JavaScript (same as before)
-    </script>
+<div class="menu">
+  <a href="#home">Home</a>
+  <a href="#Meet">Meet the Team</a>
+  <div class="dropdown">
+    <button class="dropbtn">Project Details
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Motivation and Background</a>
+      <a href="#">Timeline </a>
+      <a href="#"> More Details.....</a>
+    </div>
+  </div> 
+</div>
+
+<h1>ML Group Project</h1>
+<p>Scroll down for more information. ... 
+    more information to come
+</p>
+<div style="height:2000px"></div> <!-- For demonstration of scroll -->
+
 </body>
 </html>

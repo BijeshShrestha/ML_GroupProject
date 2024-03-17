@@ -3,34 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Plant Disease Detection and Diagnosis</title>
+<title>Plant Disease Detection </title>
 <style>
   body { font-family: Arial, sans-serif; }
   .menu { overflow: hidden; background-color: #da2c00; }
-  .menu a, .dropdown .dropbtn { float: left; display: block; color: white; text-align: center; padding: 14px 20px; text-decoration: none; cursor: pointer; }
+  .menu a, .dropdown .dropbtn { float: left; display: block; color: white; text-align: center; padding: 14px 20px; text-decoration: none; cursor: pointer; background-color: #da2c00; }
   .dropdown { float: left; overflow: hidden; }
   .dropdown-content { display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; }
-  .dropdown-content a { float: none; color: black; padding: 12px 16px; text-decoration: none; display: block; text-align: left; cursor: pointer; }
-  .dropdown-content a:hover, .dropdown:hover .dropbtn { background-color: #ddd; }
+  .dropdown-content a { color: black; padding: 12px 16px; text-decoration: none; display: block; text-align: left; }
+  .dropdown-content a:hover { background-color: #ddd; }
   .content-section { display: none; margin: 20px; }
   .team-member img { width: 100px; height: auto; border-radius: 50%; }
   .team-member, .project-detail { text-align: center; }
   .sub-section { margin-left: 20px; }
   .sub-section h3 { font-size: 16px; }
   .sub-section p, .sub-section ul { font-size: 14px; }
+  /* Style to show the dropdown */
+  .show { display: block; }
 </style>
-<script>
-function toggleSection(sectionId) {
-    var sections = document.querySelectorAll('.content-section');
-    sections.forEach(function(sec) {
-        sec.style.display = 'none';
-    });
-    var selectedSection = document.getElementById(sectionId);
-    if (selectedSection) {
-        selectedSection.style.display = 'block';
-    }
-}
-</script>
 </head>
 <body>
 
@@ -38,12 +28,11 @@ function toggleSection(sectionId) {
   <a href="javascript:void(0);" onclick="toggleSection('homeSection')">Home</a>
   <a href="javascript:void(0);" onclick="toggleSection('teamSection')">Meet the Team</a>
   <div class="dropdown">
-    <button class="dropbtn">Project Details</button>
-    <div class="dropdown-content">
+    <button class="dropbtn" onclick="toggleDropdown()">Project Details</button>
+    <div id="myDropdown" class="dropdown-content">
       <a href="javascript:void(0);" onclick="toggleSection('projectDescriptionSection')">Project Description</a>
-      <!-- Add other project details subsections if needed -->
     </div>
-  </div> 
+  </div>
 </div>
 
 <div id="homeSection" class="content-section" style="display:block;">
@@ -79,7 +68,7 @@ function toggleSection(sectionId) {
   <h2>Project Description</h2>
   <div class="sub-section">
     <h3>a. Research Question</h3>
-    <p>Research Questions</p>
+    <p>Define the core question that guides our project's research and objectives.</p>
   </div>
   <div class="sub-section">
     <h3>b. Motivation</h3>
@@ -116,10 +105,34 @@ function toggleSection(sectionId) {
 </div>
 
 <script>
-// Ensure that only the home section is displayed when the page is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    toggleSection('homeSection');
-});
+function toggleSection(sectionId) {
+    var sections = document.querySelectorAll('.content-section');
+    sections.forEach(function(sec) {
+        sec.style.display = 'none';
+    });
+    var selectedSection = document.getElementById(sectionId);
+    if (selectedSection) {
+        selectedSection.style.display = 'block';
+    }
+}
+
+// Function to toggle the visibility of the dropdown content
+function toggleDropdown() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
 </script>
 
 </body>

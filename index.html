@@ -14,30 +14,73 @@
   .dropdown-content a { float: none; color: black; padding: 12px 16px; text-decoration: none; display: block; text-align: left; }
   .dropdown-content a:hover { background-color: #ddd; }
   .dropdown:hover .dropdown-content { display: block; }
+  .team-section { display: none; } /* Initially hide the team section */
+  .team-section.active { display: block; } /* Display when activated */
+  .team-member { margin: 20px; text-align: center; }
+  .team-member img { width: 100px; height: auto; border-radius: 50%; }
+  .team-member p { margin-top: 5px; }
 </style>
+<script>
+function toggleTeamSection() {
+    var x = document.getElementById("teamSection");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
 </head>
 <body>
 
 <div class="menu">
   <a href="#home">Home</a>
-  <a href="#Meet">Meet the Team</a>
+  <a href="javascript:void(0);" onclick="toggleTeamSection()">Meet the Team</a>
   <div class="dropdown">
     <button class="dropbtn">Project Details
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
       <a href="#">Motivation and Background</a>
-      <a href="#">Timeline </a>
-      <a href="#"> More Details.....</a>
+      <a href="#">Timeline</a>
+      <a href="#">More Details...</a>
     </div>
   </div> 
 </div>
 
 <h1>ML Group Project</h1>
-<p>Scroll down for more information. ... 
-    more information to come
-</p>
+<p>Scroll down for more information...</p>
+
+<div id="teamSection" class="team-section">
+  <h2>Our Team</h2>
+  <div class="team-member">
+    <img src="img/leonardo.jpg" alt="Leonardo">
+    <p>Leonardo - The leader and the most disciplined member. Specializes in strategic planning.</p>
+  </div>
+  <div class="team-member">
+    <img src="img/michelangelo.jpg" alt="Michelangelo">
+    <p>Michelangelo - The fun-loving member and creative thinker. Known for out-of-the-box ideas.</p>
+  </div>
+  <div class="team-member">
+    <img src="img/donatello.jpg" alt="Donatello">
+    <p>Donatello - The tech genius. Uses his knowledge in technology to solve complex problems.</p>
+  </div>
+  <div class="team-member">
+    <img src="img/raphael.jpg" alt="Raphael">
+    <p>Raphael - The passionate and fierce member. Brings intensity and strength to the team.</p>
+  </div>
+  <div class="team-member">
+    <img src="img/splinter.jpg" alt="Splinter">
+    <p>Splinter - The mentor. Guides the team with wisdom and provides invaluable advice.</p>
+  </div>
+</div>
+
 <div style="height:2000px"></div> <!-- For demonstration of scroll -->
+
+<script>
+// Ensure the team section is hidden on page load
+document.getElementById("teamSection").style.display = "none";
+</script>
 
 </body>
 </html>

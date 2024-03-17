@@ -3,41 +3,63 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Plant Disease Detection </title>
+<title>Simple Website</title>
 <style>
   body { font-family: Arial, sans-serif; }
   .menu { overflow: hidden; background-color: #da2c00; }
-  .menu a, .dropdown .dropbtn { float: left; display: block; color: white; text-align: center; padding: 14px 20px; text-decoration: none; cursor: pointer; background-color: #da2c00; }
+  .menu a { float: left; display: block; color: white; text-align: center; padding: 14px 20px; text-decoration: none; }
   .dropdown { float: left; overflow: hidden; }
+  .dropdown .dropbtn { font-size: 16px; border: none; outline: none; color: white; padding: 14px 20px; background-color: inherit; font-family: inherit; margin: 0; cursor: pointer; }
   .dropdown-content { display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; }
-  .dropdown-content a { color: black; padding: 12px 16px; text-decoration: none; display: block; text-align: left; }
+  .dropdown-content a { float: none; color: black; padding: 12px 16px; text-decoration: none; display: block; text-align: left; cursor: pointer; }
   .dropdown-content a:hover { background-color: #ddd; }
-  .content-section { display: none; margin: 20px; }
+  .dropdown:hover .dropdown-content { display: block; }
+  .content-section { display: none; }
+  .team-member { margin: 20px; text-align: center; }
   .team-member img { width: 100px; height: auto; border-radius: 50%; }
-  .team-member, .project-detail { text-align: center; }
+  .team-member p { margin-top: 5px; }
+
+  
   .sub-section { margin-left: 20px; }
   .sub-section h3 { font-size: 16px; }
   .sub-section p, .sub-section ul { font-size: 14px; }
-  /* Style to show the dropdown */
-  .show { display: block; }
 </style>
+
+</style>
+<script>
+function toggleSection(sectionId) {
+    var sections = document.querySelectorAll('.content-section');
+    sections.forEach(function(sec) {
+        sec.style.display = 'none';
+    });
+
+    var selectedSection = document.getElementById(sectionId);
+    if (selectedSection) {
+        selectedSection.style.display = 'block';
+    }
+}
+</script>
 </head>
 <body>
 
 <div class="menu">
-  <a href="javascript:void(0);" onclick="toggleSection('homeSection')">Home</a>
+  <a href="#home" onclick="toggleSection('homeSection')">Home</a>
   <a href="javascript:void(0);" onclick="toggleSection('teamSection')">Meet the Team</a>
   <div class="dropdown">
-    <button class="dropbtn" onclick="toggleDropdown()">Project Details</button>
-    <div id="myDropdown" class="dropdown-content">
-      <a href="javascript:void(0);" onclick="toggleSection('projectDescriptionSection')">Project Description</a>
+    <button class="dropbtn" onclick="toggleSection('')">Project Details
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="javascript:void(0);" onclick="toggleSection('motivationSection')">Motivation and Background</a>
+      <a href="javascript:void(0);" onclick="toggleSection('timelineSection')">Timeline</a>
+      <a href="javascript:void(0);" onclick="toggleSection('detailsSection')">More Details...</a>
     </div>
-  </div>
+  </div> 
 </div>
 
 <div id="homeSection" class="content-section" style="display:block;">
   <h1>ML Group Project</h1>
-  <p>Welcome to our ML group project. Explore our site to learn more about our team, project details, and achievements.</p>
+  <p>Welcome to our ML group project. Scroll down for more information...</p>
 </div>
 
 <div id="teamSection" class="content-section">
@@ -64,75 +86,28 @@
   </div>
 </div>
 
-<div id="projectDescriptionSection" class="content-section">
-  <h2>Project Description</h2>
-  <div class="sub-section">
-    <h3>a. Research Question</h3>
-    <p>Define the core question that guides our project's research and objectives.</p>
-  </div>
-  <div class="sub-section">
-    <h3>b. Motivation</h3>
-    <p>Discuss what motivated the team to undertake this project and the problems we aim to solve.</p>
-  </div>
-  <div class="sub-section">
-    <h3>c. Background</h3>
-    <p>Provide background information that contextualizes the project within its field.</p>
-  </div>
-  <div class="sub-section">
-    <h3>d. Prior and Existing Works</h3>
-    <p>An overview of related works, including key papers and tools or applications.</p>
-    <ul>
-      <li>Papers - Summarize important research papers relevant to our project.</li>
-      <li>Tools/Apps - List and describe significant tools or applications in this area.</li>
-    </ul>
-  </div>
-  <div class="sub-section">
-    <h3>e. Methodology</h3>
-    <p>Explain the methodologies and technologies used in the project, outlining our approach.</p>
-  </div>
-  <div class="sub-section">
-    <h3>f. Results</h3>
-    <p>Present the results of the project, highlighting key findings and achievements.</p>
-  </div>
-  <div class="sub-section">
-    <h3>g. Videos, Links to Repo, and Instructions</h3>
-    <ul>
-      <li>Video demonstrations of the project.</li>
-      <li>Links to the project repository for accessing code and resources.</li>
-      <li>Instructions for setup, usage, and contribution guidelines.</li>
-    </ul>
-  </div>
+<!-- Sample sections for Project Details, initially hidden -->
+<div id="motivationSection" class="content-section">
+  <h2>Motivation and Background</h2>
+  <p>This section details the motivation and background for our project...</p>
+</div>
+<div id="timelineSection" class="content-section">
+  <h2>Timeline</h2>
+  <p>This section outlines the timeline of our project...</p>
+</div>
+<div id="detailsSection" class="content-section">
+  <h2>More Details...</h2>
+  <p>This section provides more detailed information about our project...</p>
 </div>
 
+<div style="height:2000px"></div> <!-- For demonstration of scroll -->
+
 <script>
-function toggleSection(sectionId) {
-    var sections = document.querySelectorAll('.content-section');
-    sections.forEach(function(sec) {
-        sec.style.display = 'none';
-    });
-    var selectedSection = document.getElementById(sectionId);
-    if (selectedSection) {
-        selectedSection.style.display = 'block';
-    }
-}
-
-// Function to toggle the visibility of the dropdown content
-function toggleDropdown() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    for (var i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
+// Ensure the team section is hidden on page load
+document.querySelectorAll('.content-section').forEach(function(section) {
+  section.style.display = 'none';
+});
+document.getElementById('homeSection').style.display = 'block'; // Show the home section by default
 </script>
 
 </body>

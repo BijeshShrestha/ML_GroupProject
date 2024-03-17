@@ -15,9 +15,9 @@
   .dropdown-content a:hover { background-color: #ddd; }
   .dropdown:hover .dropdown-content { display: block; }
   .content-section { display: none; }
-  .team-member, .project-detail { margin: 20px; text-align: center; }
+  .team-member { margin: 20px; text-align: center; }
   .team-member img { width: 100px; height: auto; border-radius: 50%; }
-  .team-member p, .project-detail p { margin-top: 5px; }
+  .team-member p { margin-top: 5px; }
 </style>
 <script>
 function toggleSection(sectionId) {
@@ -39,7 +39,9 @@ function toggleSection(sectionId) {
   <a href="#home" onclick="toggleSection('homeSection')">Home</a>
   <a href="javascript:void(0);" onclick="toggleSection('teamSection')">Meet the Team</a>
   <div class="dropdown">
-    <button class="dropbtn">Project Details</button>
+    <button class="dropbtn" onclick="toggleSection('')">Project Details
+      <i class="fa fa-caret-down"></i>
+    </button>
     <div class="dropdown-content">
       <a href="javascript:void(0);" onclick="toggleSection('motivationSection')">Motivation and Background</a>
       <a href="javascript:void(0);" onclick="toggleSection('timelineSection')">Timeline</a>
@@ -50,30 +52,56 @@ function toggleSection(sectionId) {
 
 <div id="homeSection" class="content-section" style="display:block;">
   <h1>ML Group Project</h1>
-  <p>Welcome to our ML group project. This is an overview of our project goals, structure, and vision.</p>
+  <p>Welcome to our ML group project. Scroll down for more information...</p>
 </div>
 
 <div id="teamSection" class="content-section">
   <h2>Our Team</h2>
-  <!-- Team Members Here -->
+  <div class="team-member">
+    <img src="img/leonardo.jpg" alt="Leonardo">
+    <p>Leonardo - The leader and the most disciplined member. Specializes in strategic planning.</p>
+  </div>
+  <div class="team-member">
+    <img src="img/michelangelo.jpg" alt="Michelangelo">
+    <p>Michelangelo - The fun-loving member and creative thinker. Known for out-of-the-box ideas.</p>
+  </div>
+  <div class="team-member">
+    <img src="img/donatello.jpg" alt="Donatello">
+    <p>Donatello - The tech genius. Uses his knowledge in technology to solve complex problems.</p>
+  </div>
+  <div class="team-member">
+    <img src="img/raphael.jpg" alt="Raphael">
+    <p>Raphael - The passionate and fierce member. Brings intensity and strength to the team.</p>
+  </div>
+  <div class="team-member">
+    <img src="img/splinter.jpg" alt="Splinter">
+    <p>Splinter - The mentor. Guides the team with wisdom and provides invaluable advice.</p>
+  </div>
 </div>
 
-<div id="motivationSection" class="content-section project-detail">
+<!-- Sample sections for Project Details, initially hidden -->
+<div id="motivationSection" class="content-section">
   <h2>Motivation and Background</h2>
-  <p>This project was inspired by the need to solve real-world problems using machine learning. Our diverse backgrounds bring a unique perspective to our approach.</p>
+  <p>This section details the motivation and background for our project...</p>
 </div>
-
-<div id="timelineSection" class="content-section project-detail">
+<div id="timelineSection" class="content-section">
   <h2>Timeline</h2>
-  <p>Our project timeline spans several months, starting with research and ending with implementation and testing.</p>
+  <p>This section outlines the timeline of our project...</p>
 </div>
-
-<div id="detailsSection" class="content-section project-detail">
+<div id="detailsSection" class="content-section">
   <h2>More Details...</h2>
-  <p>For more detailed information about our project, including technical specifications and methodologies, stay tuned.</p>
+  <p>This section provides more detailed information about our project...</p>
 </div>
 
 <div style="height:2000px"></div> <!-- For demonstration of scroll -->
+
+<script>
+// Ensure the team section is hidden on page load
+document.querySelectorAll('.content-section').forEach(function(section) {
+  section.style.display = 'none';
+});
+document.getElementById('homeSection').style.display = 'block'; // Show the home section by default
+</script>
 
 </body>
 </html>

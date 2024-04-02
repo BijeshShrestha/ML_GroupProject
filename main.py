@@ -2,21 +2,18 @@
 
 
 
-
-
-
-
-
 # --------------------------- INSTRUCTION TO RUN THE APPLICATION-----------------------------------------#
 
-
-
-
+# 1. ensure that your are on right environment
+# 2. On Terminal: streamlit run main.py 
 
 
 # --------------------------- IMPORTS --------------------------------------------------------------------#
+#Import relavant funcitons from other python files 
 from llm_output import handle_input
 from application import prediction
+
+#Import streamlit for UI
 import streamlit as st 
 
 
@@ -35,6 +32,7 @@ if image_input is not None:
         
         #Get prediction
         species, disease = prediction(image_input)
+
         # Get explanation from LLM
         answer = handle_input(species, disease)
 

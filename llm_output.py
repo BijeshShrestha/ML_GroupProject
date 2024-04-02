@@ -15,10 +15,9 @@ def ask_question(api_key, question, instructions):
     openai.api_key = api_key
     response = openai.Completion.create(
         engine="gpt-3.5-turbo-instruct",  
-
         prompt=formatted_question,
         temperature=0.5,
-        max_tokens=250,  
+        max_tokens=350,  
         top_p=1.0,
         frequency_penalty=0.0,
         presence_penalty=0.0
@@ -29,7 +28,7 @@ def ask_question(api_key, question, instructions):
     
     return answer
 
-def handle_input(text):
+def handle_input(species, disease):
     instructions = '''You are getting an input that states the plant species and predicted disease for that plant. 
     Based on your general knowledge about the plant and the predicted disease, please write your response in 3 portions:
     1. First paragraph gives a general summary of your findings. It should start with "Thank you for uploading the image, based on the prediction from our model, your plant (insert name based on input) shows (disease based on input)."
@@ -38,12 +37,6 @@ def handle_input(text):
     Also, add a disclaimer that you are basing this information on LLM data.
     Write the output as strings that can be passed for output on a UI using Python libraries.'''
     openai_api_key = load_api_key()
-    response = ask_question(openai_api_key, text, instructions)
+    input_text = f"Plant is {species} and the disease is {disease}"
+    response = ask_question(openai_api_key, input_text, instructions)
     return response
-
-
-
-if __name__ == "__main__":
-    user_question = "Plant is tomato and the disease is fungus on leaf?"
-    answer = handle_input(user_question)
-    print(f"Answer: {answer}")

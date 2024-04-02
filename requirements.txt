@@ -1,0 +1,5 @@
+python
+streamlit
+os
+openai
+dotenv

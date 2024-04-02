@@ -3,7 +3,9 @@ import streamlit as st
 import requests
 
 def send_image_to_flask(file):
-    url = 'http://localhost:5000/predict'  # Make sure to adjust this URL to your Flask app's URL.
+    # url = 'http://localhost:5000/predict'  #Flask app's URL.
+    url = ' https://cf77-108-20-133-165.ngrok-free.app'  #Flask app's URL.
+
     files = {'file': (file.name, file, 'multipart/form-data')}
     response = requests.post(url, files=files)
     if response.status_code == 200:

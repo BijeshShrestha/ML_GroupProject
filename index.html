@@ -23,6 +23,23 @@
   .sub-section { margin-left: 20px; }
   .sub-section h3 { font-size: 16px; }
   .sub-section p, .sub-section ul { font-size: 14px; }
+
+  .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 750px;
+  margin-left: 20px;
+ 
+  
+}
+.image {
+  padding: 10px;
+}
+
+.text {
+  padding: 10px;
+}
 </style>
 
 </style>
@@ -71,6 +88,8 @@ function toggleSection(sectionId) {
   <p>
     Our app allows a user to upload a picture of a plant. Our app will then determine the plant's health and will give some useful information on proper care and maintenance of the plant.
   </p>
+  <h2>Here's A Prediction</h2>
+  <img src="img/strawberrypreiction.png" alt="image presiction" width="850" height="600">
 </div>
 
 <div id="teamSection" class="content-section">
@@ -103,6 +122,10 @@ function toggleSection(sectionId) {
 <!Sections for Project Details>
 <div id="motivationSection" class="content-section">
   <h2>Motivation</h2>
+
+  <p>
+    Between 20% to 40% of global crop production is lost due to pests annually. Furthermore, plant diseases cost the global economy around $220 billion according to the Food and Agriculture Organization of the United Nations [1]. 
+  </p>
   <p>Research into the domain of plant disease detection using 
     computer vision capabilities has piqued the interest of 
     researchers from both the academic and industrial
@@ -145,32 +168,37 @@ function toggleSection(sectionId) {
         </li>
       </ul>
       
-    
+    <h2>References:</h2>
+    <ol>
+      <li>
+        UN Focus on Plant Health, Crucial for Boosting Food Security Worldwide | UN News. 12 May 2022, https://news.un.org/en/story/2022/05/1118102.
+      </li>
+    </ol>
 </div>
 <div id="timelineSection" class="content-section">
   <h2>Background</h2>
   <p> [4] reviewed current deep learning methods for 
     identifying plant species and detecting diseases from leaf images.
-     The review highlighted four key strategies:</p>
+     Their review highlighted four key strategies:</p>
      <ul>
       <li>
-        multi-model: Use two CNN (Convolutional Neural Network) models on leaf 
-        images, with one model identifying plant species and the other
-        diagnosing leaf diseases.</li><br/>
+        <h3>Multi-Model</h3>
+         <p>They constructed a dual-model ensemble comprising two convolutional neural networks (CNNs). One model focused on identifying plant species from leaf images, while the other was dedicated to disease prediction. To ensure a comprehensive analysis, the researchers employed various backbone CNN architectures for this approach, which included their custom model as well as established models like AlexNet, VGG16, ResNet101, EfficientNet, InceptionV3, and MobileNetV2.</p>
+      </li>
         <li>
-          multi-label: Employ a single CNN model to generate multiple labels 
-          simultaneously, unlike traditional multi-label learning. 
-          This strategy merges labels into a combined power-set label 
-          for both training and identification purposes.
-        </li><br/>
+          <h3>Multi-Label</h3>
+          <p>They also created a single CNN architecture designed to output multiple labels. Additionally, this framework diverged from conventional multi-label learning methods mentioned in [5]. They combined  these labels to form a power-set label for predictions. Essentially,  utilized a unified label to represent multiple labels simultaneously. Additionally, they leveraged various backbone CNN architectures to support this methodology.</p>
+        </li>
         <li>
-          multi-output: Use a single CNN model, similar to the
-           multi-label strategy. However, it differs by having 
-           separate output layers for each classification target.
-        </li><br/>
+          <h3>Multi-Output</h3>
+           <p>The researchers also created a single CNN model, similar to the
+            multi-label strategy. However, it differs by having 
+            separate output layers for each classification target.</p>
+        </li>
         <li>
-          Adopt a multi-task learning framework that targets 
-          different objectives using data from the same dataset.
+          <h3>Multi-Task</h3>
+          <p>Adopt a multi-task learning framework that targets 
+            different objectives using data from the same dataset.</p>
         </li>      
      </ul>
      <p>Building on these methods, the authors introduced a novel 
@@ -218,25 +246,55 @@ function toggleSection(sectionId) {
         learning for plant identification and disease classifica-
         tion from leaf images: Multi-prediction approaches.
         ACM Comput. Surv., jan 2024. Just Accepted.
-        Page 3</li>  </ol>   
+        Page 3</li> <br/>
+      <li>
+        Gjorgji M, Dragi K, Dejan G, and Sašo D. 2012. An extensive experimental comparison of methods for multi-label learning. Pattern Recognition 45, 9 (2012), 3084–3104. DOI:https://doi.org/10.1016/j.patcog. 2012.03.004 Best Papers of Iberian Conference on Pattern Recognition and Image Analysis (IbPRIA’2011).
+      </li> </ol>   
     
     </div>
 </div>
 <div id="detailsSection" class="content-section">
   <h2>Existing Technologies</h2>
   <p>There are several commercially available apps
-     that can identify infected plants. Some of these apps include:
-     <ul>
-      <li>
-        “PlantSaver – Plants Identifier”
-      </li><br/>
-      <li>
-        “Agrio” and
-      </li><br/>
-      <li>
-        “Plant Disease Identifier”
-      </li><br/>
-     </ul>         
+     that can identify infected plants. Some of these apps include:</p>
+
+     <div class="container">
+      <div>
+        <img src="img/PlantSaverApp.jpeg" alt="plant Saver" height="150" width="150">
+      </div>     
+      <div class="text">
+        <h3>PlantSaver - Plants Identifier</h3>
+        <p>
+          This app allows the user to identify the plants in front of them, determine the ideal watering schedule for the plants and provide some disease diagnosis.
+        </p>
+        </div>
+     </div>
+
+     <div class="container">
+          <div class="text">
+        <h3>Agrio: Plant Health App</h3>
+        <p>
+          This app allows farmers and gardens to remotely monitor, identify and treat plant diseases in the field. The app offers a personalized experience by tailoring plant disease diagnostics and treatment plans to specific to an individual's needs. 
+        </p>
+        </div>
+        <div>
+          <img src="img/Agrio.jpeg" alt="plant Saver" height="150" width="150">
+        </div> 
+     </div>
+                  
+     <div class="container">
+      <div>
+        <img src="img/PlantDiseaseidentifier.jpeg" alt="plant Saver" height="150" width="150">
+      </div>     
+      <div class="text">
+        <h3>Plant Disease Identifier</h3>
+        <p>
+          This app allows the user to take a picture of a plant and through computer vision, the app determines of the plant is infected ir not.
+        </p>
+        </div>
+     </div>
+           
+     <p>
       All apps are all available on the Apple App Store. 
       Each app allows the user to take a picture of a plant, 
       and the app will determine whether or not the plant is 
@@ -246,7 +304,6 @@ function toggleSection(sectionId) {
       a web-based application, which requires a monthly 
       subscription. </p>
      
-</div>
 </div>
 <div id="detailsSection2" class="content-section">
   <h2>Our Contribution</h2>

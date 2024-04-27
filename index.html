@@ -14,7 +14,7 @@
   .dropdown-content a { float: none; color: black; padding: 12px 16px; text-decoration: none; display: block; text-align: left; cursor: pointer; }
   .dropdown-content a:hover { background-color: #ddd; }
   .dropdown:hover .dropdown-content { display: block; }
-  .content-section { display: none; }
+  .content-section { display: none; width: 800px; }
   .team-member { margin: 20px; text-align: center; }
   .team-member img { width: 100px; height: auto; border-radius: 50%; }
   .team-member p { margin-top: 5px; }
@@ -87,9 +87,9 @@ function toggleSection(sectionId) {
       <a href="javascript:void(0);" onclick="toggleSection('timelineSection')">Background</a>
       <a href="javascript:void(0);" onclick="toggleSection('detailsSection')">Existing Applications</a>
       <a href="javascript:void(0);" onclick="toggleSection('detailsSection2')">Our Contribution</a>
-      <a href="javascript:void(0);" onclick="toggleSection('motivationSection2')">Methodology</a>
-      <a href="javascript:void(0);" onclick="toggleSection('timelineSection2')">Results and Discussions</a>
-      <a href="javascript:void(0);" onclick="toggleSection('detailsSection3')">Turorials, Guides, and Repository</a>
+      <a href="javascript:void(0);" onclick="toggleSection('motivationSection2')">Results and Discussions</a>
+      <a href="javascript:void(0);" onclick="toggleSection('timelineSection2')">Turorials, Guides, and Repository</a>
+      <a href="javascript:void(0);" onclick="toggleSection('detailsSection3')">Conslusions and Reflections</a>
 
     </div>
   </div> 
@@ -104,11 +104,7 @@ function toggleSection(sectionId) {
   <h3><a href="https://demo.shrestha.club">https://demo.shrestha.club</a></h3>  <a href="https://demo.shrestha.club">
     <img src="img/webAllScreenShot.png" alt="Our Web App" width="850" height="400">
   </a>
-  <p>
-    Our app allows a user to upload a picture of a plant. Our app will then determine the plant's health and will give some useful information on proper care and maintenance of the plant.
-  </p>
-  <h2>Here's A Prediction</h2>
-  <img src="img/strawberrypreiction.png" alt="image presiction" width="850" height="600">
+ 
 </div>
 
 
@@ -213,7 +209,7 @@ function toggleSection(sectionId) {
      </div>
      <div class="right_column">
 <div class="text">
-  <h3>Multi-p</h3>
+  <h3>Multi-Label</h3>
   <p>They also created a single CNN architecture designed to output multiple ps. Additionally, this framework diverged from conventional multi-p learning methods mentioned in [5]. They combined  these ps to form a power-set p for predictions. Essentially,  utilized a unified p to represent multiple ps simultaneously. Additionally, they leveraged various backbone CNN architectures to support this methodology.</p>
 </div>
      </div>
@@ -355,12 +351,41 @@ function toggleSection(sectionId) {
 <div id="detailsSection2" class="content-section">
   <h2>Our Contribution</h2>
   <p>
-    For this project, this team will develop a 
+    For this project, this team developed a 
     free-to-use guide for beginners to the field of 
     Machine Learning who want to create their own Plant Disease 
     Classifier. This team will outline the steps involved, 
     including preprocessing techniques, model architectures, and evaluation metrics needed to create a robust model.
   </p>
+
+  <h3>Experimentation</h3>
+  <p>Our team performed several experiemnts in an effort to improve on the authors' GSMo-CNN model. These efforts included:
+    adding additional hidden layers and tuning several hyperparaeters. 
+  </p>
+
+  <h3>Tutorials</h3>
+  <p>
+    The team has prepared a guide for new users to set up an environment on a local computer to train the authors' proposed GSMo-CNN model on a small dataset ("PlantDoc"). Additionlly, we have created tutorials aimed at allowing news users to clone our web app (discussed below) to use the trained model to predict plant species and disease for any uploaded image. For WPI students, we also created a separate guide on using Turing to train the model more efficiently using A100/V100 GPUs.
+  </p>
+
+<h3>Web Application</h3>
+<p>As part of our free to use guide, our team developed a web application that will allow users to quickly classify plant species and diseases. Since our product is geared towards beginners and hobbists, our team decided to also include a standalone Machine Learning 
+product in which a beginner can showcase the results of their model in a visually pleasing way.  
+</p>
+
+  <p>
+    Our app allows a user to upload a picture of a plant. Then, the app will determine the plant's species and health, and will give some useful information on proper care and maintenance.
+  </p>
+  <h4>Here's A Prediction</h4>
+  <img src="img/strawberrypreiction.png" alt="image prediction" width="850" height="600">
+
+<p>
+Please note that the app makes an API call to OpenAI's Large Languae Model (LLM) in order to generate the additional 
+information on care and maintenance. If the users of our do not have an API key, the app will only classify the plant species and disease. 
+</p>
+  
+
+
   <h2>Impact</h2>
   <p>
     The impact of this project lies in its ability to serve as a guide for future works. Future researchers can use this project as a reference and a starting point for their research. 
@@ -372,21 +397,31 @@ function toggleSection(sectionId) {
      Furthermore, it introduces beginners to the interdisciplinary nature of applied machine learning, blending computer science with botany and plant pathology, thereby broadening their understanding and appreciation of the field. By tackling a specific task like plant disease classification, beginners can gain hands-on experience with data preprocessing, feature extraction, model selection, and evaluation metrics, all of which are foundational skills in machine learning. Additionally, such a guide can highlight the importance of domain expertise in developing effective machine learning solutions, showing how collaboration between machine learning practitioners and subject matter experts can lead to more accurate and meaningful outcomes.
 
   </p>
+  
 
 
 </div>
 <!Sections for Project Details - Second Set>
 <div id="motivationSection2" class="content-section">
-  <h2>Methodology</h2>
-  <p>This section details the motivation and background for our project...</p>
-</div>
-<div id="timelineSection2" class="content-section">
   <h2>results and Discussion</h2>
   <p>This section outlines the timeline of our project...</p>
 </div>
-<div id="detailsSection3" class="content-section">
+<div id="timelineSection2" class="content-section">
   <h2>Tutorials and How to guide</h2>
   <p>This section provides more detailed information about our project...</p>
+</div>
+<div id="detailsSection3" class="content-section">
+  <h2>Conclusions and Reflections</h2>
+  <p>On completing this project, we have created a free to use guide for new comers to the field of Machine Learning 
+    to develop a Plant Species and Disease classification model. As part of this endeaver, we created tutorials and a standalone web application. 
+  </p>
+  <p>
+With our project as a guide, our readers will not only have framework to build their own models, but they will also have a means of showcasing their work.
+  </p>
+  <p> 
+    AI has completely revolutionalized the field of plant pathogy, and expensive research is constantly being conducted.
+    We believe that this project can serve as a stepping stone for future endeavers.
+  </p>
 </div>
 <div style="height:2000px"></div> 
 

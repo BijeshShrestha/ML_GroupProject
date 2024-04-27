@@ -26,18 +26,34 @@
 
   .container {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
   width: 750px;
-  margin-left: 20px;
- 
-  
+  margin-left: 20px; 
 }
+
+
+.left_column {
+  width: 49%;
+  text-align: left;
+}
+
+.right_column{
+  width: 49%;
+  text-align: left;
+}
+
+
 .image {
   padding: 10px;
 }
 
 .text {
+  padding: 10px;
+}
+
+.column-text {
+  width: 49%;
   padding: 10px;
 }
 </style>
@@ -180,35 +196,62 @@ function toggleSection(sectionId) {
   <p> [4] reviewed current deep learning methods for 
     identifying plant species and detecting diseases from leaf images.
      Their review highlighted four key strategies:</p>
-     <ul>
-      <li>
+
+     <div>
+      <img src="img/backbone model approaches.png" width="750", height="350">
+    </div>
+     <div class="container">
+     <div class="left_column">
+      <div class="text">
         <h3>Multi-Model</h3>
-         <p>They constructed a dual-model ensemble comprising two convolutional neural networks (CNNs). One model focused on identifying plant species from leaf images, while the other was dedicated to disease prediction. To ensure a comprehensive analysis, the researchers employed various backbone CNN architectures for this approach, which included their custom model as well as established models like AlexNet, VGG16, ResNet101, EfficientNet, InceptionV3, and MobileNetV2.</p>
-      </li>
-        <li>
-          <h3>Multi-Label</h3>
-          <p>They also created a single CNN architecture designed to output multiple labels. Additionally, this framework diverged from conventional multi-label learning methods mentioned in [5]. They combined  these labels to form a power-set label for predictions. Essentially,  utilized a unified label to represent multiple labels simultaneously. Additionally, they leveraged various backbone CNN architectures to support this methodology.</p>
-        </li>
-        <li>
-          <h3>Multi-Output</h3>
-           <p>The researchers also created a single CNN model, similar to the
-            multi-label strategy. However, it differs by having 
-            separate output layers for each classification target.</p>
-        </li>
-        <li>
-          <h3>Multi-Task</h3>
-          <p>Adopt a multi-task learning framework that targets 
-            different objectives using data from the same dataset.</p>
-        </li>      
-     </ul>
-     <p>Building on these methods, the authors introduced a novel 
-      technique named Generalised Stacking Multi-output CNNs (GSMo-CNN).
-      This method combines some strengths of the aforementioned
-      approaches to enhance performance by creating a sequence of output 
-      layers. This sequential structure forms a hierarchical 
-      classification system aimed at accurately representing the 
-      relationship between various plant species and their diseases 
-      during analysis.</p> 
+        <p>They constructed a dual-model ensemble comprising two convolutional neural networks (CNNs). One model focused on identifying plant species from leaf images, while the other was dedicated to disease prediction. To ensure a comprehensive analysis, the researchers employed various backbone CNN architectures for this approach, which included their custom model as well as established models like AlexNet, VGG16, ResNet101, EfficientNet, InceptionV3, and MobileNetV2.</p>
+      </div>
+     </div>
+     <div class="right_column">
+<div class="text">
+  <h3>Multi-p</h3>
+  <p>They also created a single CNN architecture designed to output multiple ps. Additionally, this framework diverged from conventional multi-p learning methods mentioned in [5]. They combined  these ps to form a power-set p for predictions. Essentially,  utilized a unified p to represent multiple ps simultaneously. Additionally, they leveraged various backbone CNN architectures to support this methodology.</p>
+</div>
+     </div>
+          </div>
+
+          <div class="container">
+            <div class="left_column">
+             <div class="text">
+              <h3>Multi-Output</h3>
+              <p>The researchers also created a single CNN model, similar to the
+               multi-p strategy. However, it differs by having 
+               separate output layers for each classification target.</p>
+             </div>
+            </div>
+            <div class="right_column">
+       <div class="text">
+        <h3>Multi-Task</h3>
+        <p>Adopt a multi-task learning framework that targets 
+          different objectives using data from the same dataset.</p>
+       </div>
+            </div>
+                 </div>
+   
+<div class="container" style="align-items: center;">
+  <div>
+    <img src="img/model_ivan.png" height="400", width="350">
+    <p style="text-align: center;">Novel Architecture</p>
+  </div>
+
+<div class="text">
+  <p>Building on these methods, the authors introduced a novel 
+    technique named Generalised Stacking Multi-output CNNs (GSMo-CNN).
+    This method combines some strengths of the aforementioned
+    approaches to enhance performance by creating a sequence of output 
+    layers. This sequential structure forms a hierarchical 
+    classification system aimed at accurately representing the 
+    relationship between various plant species and their diseases 
+    during analysis.</p> 
+</div>
+</div>
+  
+    
       <p>
         Furthermore, the study explored the effectiveness of 
         different CNN architectures (e.g., AlexNet, VGG16, InceptionV3) 
@@ -248,10 +291,10 @@ function toggleSection(sectionId) {
         ACM Comput. Surv., jan 2024. Just Accepted.
         Page 3</li> <br/>
       <li>
-        Gjorgji M, Dragi K, Dejan G, and Sašo D. 2012. An extensive experimental comparison of methods for multi-label learning. Pattern Recognition 45, 9 (2012), 3084–3104. DOI:https://doi.org/10.1016/j.patcog. 2012.03.004 Best Papers of Iberian Conference on Pattern Recognition and Image Analysis (IbPRIA’2011).
+        Gjorgji M, Dragi K, Dejan G, and Sašo D. 2012. An extensive experimental comparison of methods for multi-p learning. Pattern Recognition 45, 9 (2012), 3084–3104. DOI:https://doi.org/10.1016/j.patcog. 2012.03.004 Best Papers of Iberian Conference on Pattern Recognition and Image Analysis (IbPRIA’2011).
       </li> </ol>   
+  </div>
     
-    </div>
 </div>
 <div id="detailsSection" class="content-section">
   <h2>Existing Technologies</h2>

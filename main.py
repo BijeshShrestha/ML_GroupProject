@@ -23,7 +23,7 @@ import streamlit as st
 
 # -------------------------- Page Logo -------------------------------------------------------------------#
 
-st.set_page_config(layout="wide")
+st.set_page_config(layout="wide", page_title="Plant Disease Detection", page_icon="🌿")
 st.image('healthy-veg-gard_background.jpg', caption='Veg Garden')
 
 # Main page content instead of Sidebar

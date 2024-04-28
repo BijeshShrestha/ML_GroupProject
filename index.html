@@ -264,7 +264,6 @@ function toggleSection(sectionId) {
     <img src="img/model_ivan.png" height="400", width="350">
     <p style="text-align: center;">Novel Architecture</p>
   </div>
-
 <div class="text">
   <p>Building on these methods, the authors inthoduced a novel 
     technique named Generalised Stacking Multi-output CNNs (GSMo-CNN).
@@ -276,22 +275,29 @@ function toggleSection(sectionId) {
     during analysis.</p> 
 </div>
 </div>
-  
-    
-      <p>
+           <p>
         Furthermore, the study explored the effectiveness of 
         different CNN architectures (e.g., AlexNet, VGG16, InceptionV3) 
-        across all four sthategies by testing them on three well-known 
+        across all four strategies by testing them on three well-known 
         plant disease image datasets: 
         <ul>
           <li>
-            Plant Village [2]
-          </li><br/>
+            <p>
+              <a href="https://data.mendeley.com/datasets/tywbtsjrjv/1"> Plant Village [2]</a>
+            </p>
+           
+          </li>
           <li>
-            Plant Leaves [1] and,
-          </li><br/>
+            <p>
+              <a href="https://data.mendeley.com/datasets/hb74ynkjcn/1"> Plant Leaves [1]</a>
+            </p>
+    
+          </li>
           <li>
-            Plant Doc [3]
+            <p>
+              <a href="https://github.com/pratikkayal/PlantDoc-Dataset">Plant Doc [3]</a>
+            </p>
+            
           </li>
         </ul> InceptionV3 emerged as the superior CNN architecture 
         for identifying plant species and predicting diseases.
@@ -455,7 +461,7 @@ information on care and maintenance. If the users of our do not have an API key,
     </li>
     <li>
       <p>
-        C.  Use of Dilated Convolution. Inthoduced dilated convolutions in the new convolutional layers to increase the receptive field. This may allow the model to exthact broader contextual information from the input data without significantly increasing the computational complexity.
+        C.  Use of Dilated Convolution. Introduced dilated convolutions in the new convolutional layers to increase the receptive field. This may allow the model to exthact broader contextual information from the input data without significantly increasing the computational complexity.
       </p>
     </li>
     <li>
@@ -516,6 +522,19 @@ information on care and maintenance. If the users of our do not have an API key,
   </table>
 
   <img src="img/Model Performance Summery.png" width="800" height="450">
+
+  <p>
+    From the results of our experimentation above, experiment 1 achieved the best perfimrance
+    and outperformed the authors' orignal model on the Plant Doc dataset.   
+    It appears that the addition of extra convolutional layers and the reduction of pooling layer sizes lead 
+    to an improvement in performance. This improvement, however, came at the cost of increased training time
+    as more weights needed to be learnt. 
+  </p>
+  <p>
+    Even though experiement 1 improved on the performance of the authors' model by approximately 25%, its preformance is still poor. Both the authors' model and experiement 1 frequently misclassifed the plant species, disease and combination of the two. These results are likely due to the models being trained on the PlantDoc dataset. This dataset only contained 2,598 images with 13 
+    classes of plant species and 17 classes of diseases. Given that we were training a model to simultaneously predict 
+    plant species and disease, we would likely need a lot more training examples so that the model better learn patterns and to prevent overfitting. 
+  </p>
 
 </div>
 <div id="timelineSection2" class="content-section">

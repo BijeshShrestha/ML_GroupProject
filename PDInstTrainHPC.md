@@ -2,23 +2,26 @@
 output:
   html_document: default
 title:
-  Instructions for Training on WPI's HPC (Turing) and Prediction Locally
+  Instructions for Training on a non-WPI High-Performance Computing (HPC) Evironment and Prediction Locally
 --- -->
 
 Please note that this tutorial is for a Linux environment only 
-(Turing is a local environment, but your local machine may not be). 
 However, if you are familiar with a Windows or Mac command-line, 
 then adapting these instructions should not be too much trouble.
 
-# Setup Turing
+# Home Directory
 
-Your Turing account is usually in "/home/user", where user is your WPI userid. 
+We designate your home directory on the HPC is called "/home/user". 
 Throughout this document, "/home/user" should be replaced with your own home 
 directory.
 
 ## Install Anaconda
 
-The following will install miniconda into your Turing account:
+Note: Always get permission for any actions on your HPC, and that includes installation of external software. You must be aware of what is responsible 
+use in your HPC environment. If in doubt, contact your help desk or 
+administrator.
+
+The following will install miniconda into your HPC account:
 
     cd /home/user
     wget https://repo.anadonda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
@@ -50,8 +53,8 @@ this document.
 
 ## Clone Repositories
 
-Choose a directory to store the repositories in. Replace "/home/user/git" with
-the name of the parent directory of this repository throughout this document.
+Choose a directory to store the repositoriy in. Replace "/home/user/git" with
+the name of the parent directory of the repository throughout this document.
 
     mkdir /home/user/git
     cd /home/user/git
@@ -67,7 +70,7 @@ two pictures in the train folder first.
 
 Please keep the test folder and the train folder. Erase the other files.
 
-# Train Model on Turing
+# Train Model on HPC
 
 ## main.py setup
 
@@ -90,42 +93,24 @@ use the following settings (global variables) in main.py:
     model_name = 'Inception'
 
 Note that you may want to set the 'saverun' subdirectory in save_path
-to be something unique to this particular instance of training
+to be something unique to this particular instance of training. For instance,
+you may wish to add the date and time to the file specification.
 
-## Running Turing Batch Job For Training
+## Training on HPC
 
-The following instructions are to run a batch job in turing.wpi.edu.
+Careful: many HPC environments have strict rules on what you can and cannot do. 
+For example, at WPI, you can't run this interactively, it must be done in a 
+batch job. You must be aware of what is responsible use in your HPC 
+environment. If in doubt, contact your help desk or administrator.
 
-The turing.wpi.edu shell script to submit training
-as a batch job is as follows:
+The following instructions will train the model on HPC.
 
-    \#!/bin/bash
-    \#SBATCH --mem=40g
-    \#SBATCH -J "dfmp539"
-    \#SBATCH -p short
-    \#SBATCH -t 12:00:00
-    \#SBATCH -C A100
-    \#SBATCH --gres=gpu:2
-    module load python/3.7.13/
-    module load cuda
-    module load cuda11.2/blas
-    module load cuda11.2/fft
-    module load cuda11.2/toolkit
-    source /home/user/miniconda3/etc/profile.d/conda.sh
     conda activate my_env
-    python /home/user/git/plant_pathology_dl/main.py
+    cd /home/user/git/plant_pathology_dl
+    python main.py
 
-Save the above script into a .sh file. For the purposes of these instructions,
-we'll call it my_script.sh
-
-Then you run:
-
-    $ sbatch my_script.sh
-
-Submitted batch job 999999
-
-The output of the script will be sent to a slurm output file. This file is
-called slurm-<batch job id>.out, or, in the above case, slurm-999999.out.
+This will output a lot of training context to the standard output. You may 
+wish to redirect standard output to another file.
 
 ## Performance metrics and Weights
 
@@ -151,7 +136,7 @@ this tutorial will be easier to follow if you do it following this example:
 
     cp /home/user/git/plant_pathology_dl/saverun/PlantDoc_original_new_model/PlantDoc_original_new_model/model_save/Inception/new_model\_\_\_No_9/model_0.5067fig_size_256/PlantDoc_original_new_model_Inception_multi_tasks.h5 /home/user/pd_weights.h5
 
-## Setup Prediction / Local Machine
+# Setup Prediction / Local Machine
 
 You are now ready to setup your local machine.
 
@@ -177,7 +162,7 @@ document.
     conda install streamlit
     conda install openai
 
-### Clone Repository
+## Clone Repository
 
 Choose a name for the local git repository. For this tutorial, we will use 
 "/Users/user/git". You will replace that name with your own throughout this 
@@ -188,17 +173,16 @@ document.
     git clone https://github.com/BijeshShrestha/ML_GroupProject
 
 Copy the weights file (.h5) from Turing onto the local machine. The following 
-uses rsync to copy the weights file (.h5), but you may use anything (like scp) 
-that will copy a file from Turing to your local machine.
+uses rsync to copy the weights file (.h5), but you may use anything 
+(like scp or ftp) that will copy a file from Turing to your local machine.
 
-Also, you will need to specify the IP address of Turing, which we do not 
-supply here as it may change. Contact the administrator to obtain that IP 
-address. We will designate the IP address as <Turing IP Address>. Also, you 
-will use your username on Turing (the one you login with). We will designate 
-your username as <Turing username>.
+Also, you will need to specify the IP address of the HPC, which you may or may not know. Contact the administrator to understand if rsync can be used to transfer files and to obtain that IP address. We will designate the IP address as 
+<HPC IP Address>. Also, you 
+will use your username on the HPC (the one you login with). We will designate 
+your username as <HPC username>.
 
     cd /Users/user/git/ML_GroupProject
-    rsync --progress <Turing username>@<Turing IP address>:pd_weights.h5 .
+    rsync --progress <HPC username>@<HPC IP address>:pd_weights.h5 .
 
 Now edit the classifier.py file:
 

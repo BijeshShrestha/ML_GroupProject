@@ -7,12 +7,12 @@ title:
 
 Please note that this tutorial is for a Linux environment only 
 (Turing is a local environment, but your local machine may not be). 
-However, if you are familiar with a Windows or Mac command-line, 
+However, if you are familiar with Windows or Mac command-line, 
 then adapting these instructions should not be too much trouble.
 
 # Setup Turing
 
-Your Turing account is usually in "/home/user", where user is your WPI userid. 
+Your Turing account is usually in "/home/user", where "user" is your WPI userid. 
 Throughout this document, "/home/user" should be replaced with your own home 
 directory.
 
@@ -163,7 +163,7 @@ so as not to confuse the two, since it is likely that your home directory on
 the two machines (Turing and local) are different.
 
 Reminder: although this tutorial is for Linux only, the local machine can be 
-adapted to Mac-based or Windows-based machines without too much trouble, for 
+adapted to Mac-based or Windows-based machines without too much trouble for 
 those familiar with the command-line interface.
 
 Download anaconda from https://www.anaconda.com/download and install.

@@ -2,11 +2,11 @@
 output:
   html_document: default
 title:
-  Instructions for Training on a non-WPI High-Performance Computing (HPC) Evironment and Prediction Locally
+  Instructions for Training on a non-WPI High-Performance Computing (HPC) Environment and Prediction Locally
 --- -->
 
 Please note that this tutorial is for a Linux environment only 
-However, if you are familiar with a Windows or Mac command-line, 
+However, if you are familiar with Windows or Mac command-line, 
 then adapting these instructions should not be too much trouble.
 
 # Home Directory
@@ -53,7 +53,7 @@ this document.
 
 ## Clone Repositories
 
-Choose a directory to store the repositoriy in. Replace "/home/user/git" with
+Choose a directory to store the repository in. Replace "/home/user/git" with
 the name of the parent directory of the repository throughout this document.
 
     mkdir /home/user/git
@@ -148,7 +148,7 @@ so as not to confuse the two, since it is likely that your home directory on
 the two machines (Turing and local) are different.
 
 Reminder: although this tutorial is for Linux only, the local machine can be 
-adapted to Mac-based or Windows-based machines without too much trouble, for 
+adapted to Mac-based or Windows-based machines without too much trouble for 
 those familiar with the command-line interface.
 
 Download anaconda from https://www.anaconda.com/download and install.

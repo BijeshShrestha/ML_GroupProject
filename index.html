@@ -1,1 +1,679 @@
-<p style="white-space: pre-wrap;"><a href="#home" target="_blank">Home</a></p><p style="white-space: pre-wrap;"><a href="javascript:void(0);" target="_blank">Meet the Team</a></p><p style="white-space: pre-wrap;">Project Details       </p><p style="white-space: pre-wrap;"><a href="javascript:void(0);" target="_blank">Motivation</a></p><p style="white-space: pre-wrap;"><a href="javascript:void(0);" target="_blank">Background</a></p><p style="white-space: pre-wrap;"><a href="javascript:void(0);" target="_blank">Existing Applications</a></p><p style="white-space: pre-wrap;"><a href="Our Contribution" target="_blank">Our Contribution</a></p><p style="white-space: pre-wrap;"><a href="javascript:void(0);" target="_blank">Results and Discussions</a></p><p style="white-space: pre-wrap;"><a href="Tutorials, Guides, and Repository" target="_blank">Tutorials, Guides, and Repository</a></p><p style="white-space: pre-wrap;"><a href="Conclusions and Reflections" target="_blank">Conclusions and Reflections</a></p><h1 style="white-space: pre-wrap;">ML Group Project</h1><p style="white-space: pre-wrap;">Our project will develop an open-source web application that leverages advanced Convolutional Neural Networks to provide accurate and      efficient plant disease detection and diagnosis, facilitating agricultural productivity, and serving as an educational tool for technology and agriculture enthusiasts.</p><h2 style="white-space: pre-wrap;">Our Web App</h2><h3 style="white-space: pre-wrap;"><a href="https://demo.shrestha.club" target="_blank">https://demo.shrestha.club</a></h3><p style="white-space: pre-wrap;"><a href="https://demo.shrestha.club" target="_blank"><img src="img/webAllScreenShot.png" alt="Our Web App" contenteditable="false" draggable="true">   </a>   </p><h2 style="white-space: pre-wrap;">Our Team</h2><p style="white-space: pre-wrap;"><img src="img/ChadHucey.png" alt="Leonardo" contenteditable="false" draggable="true">     </p><p style="white-space: pre-wrap;">Hi, I’m Chad and I’m originally from Kingston, Jamaica. I studied Mechanical Engineering as an undergrad at WPI and then transitioned to Data Science. I really like to watch soccer and Formula 1 - I’m an avid fan of both sports.        I would really like to see a live Formula 1 event in the future.	</p><p style="white-space: pre-wrap;"><img src="img/Dan_Headshot.jpg" alt="Michelangelo" contenteditable="false" draggable="true">     </p><p style="white-space: pre-wrap;">Dan Fox is enrolled in a Master of Science in Data Science program at Worcester Polytechnic Institute and expects to get his degree in December 2024. He has 22 years of previous experience in software engineering development, focused on network-based embedded software.        He received his undergraduate degree from the Massachusetts Institute of Technology.</p><p style="white-space: pre-wrap;"><img src="img/IvanLim.jpg" alt="Donatello" contenteditable="false" draggable="true">     </p><p style="white-space: pre-wrap;">Ivan Lim is currently pursuing a PhD in Data Science in Worcester Polytechnic Institute. Specifically, he focuses on the growing prevalence of online learning platforms within the educational sector and teachers' use of these platforms.        His research aims to analyze teachers' digital pedagogy, utilizing digital footprints or log files from these platforms, to understand their impact on student learning outcomes. </p><p style="white-space: pre-wrap;"><img src="img/bijesh.png" alt="Raphael" contenteditable="false" draggable="true">     </p><p style="white-space: pre-wrap;">Bijesh is an active-duty Army officer currently pursuing a PhD in Data Science, with a focus on AI applications in data visualization, specifically aimed at enhancing collaboration and decision-making. In his leisure time, he enjoys engaging in outdoor activities such as fishing, hunting, hiking, and kayaking, alongside tackling various home improvement projects.</p><p style="white-space: pre-wrap;"><img src="img/splinter.jpg" alt="Splinter" contenteditable="false" draggable="true">     </p><p style="white-space: pre-wrap;">Splinter - The mentor. Guides the team with wisdom and provides invaluable advice.</p><h2 style="white-space: pre-wrap;">Motivation</h2><p style="white-space: pre-wrap;">     Between 20% to 40% of global crop production is lost because of pests annually. Furthermore, plant diseases cost the global economy around $220 billion according to the Food and Agriculture Organization of the United Nations [1].    </p><p style="white-space: pre-wrap;">Research into the domain of plant disease detection using      computer vision capabilities has piqued the interest of      researchers from both the academic and industhial     sides alike. We are growing accustomed to having various     machine-learning applications that help us with difficult     tasks, such as plant disease identification with varied levels     of accuracy and usability.</p><p style="white-space: pre-wrap;">Many disease prediction efforts rely solely on examining        images of plant leaves. However, there is an increasing         demand for not only classifying diseases but also plant          species. A multi dimensional classification solution would          be much more attractive, especially for large-scale crop           management.  </p><p style="white-space: pre-wrap;"> This project is driven by     the potential of convolutional neural networks (CNNs) to     significantly advance the identification process of plant     ailments with a higher accuracy and efficiency that were     previously unattainable.</p><p style="white-space: pre-wrap;"> Our thesis explores advanced     disease identification methods in plants through an active     literature review and translating these techniques into a     practical, user-friendly tool. We aim to expand on an     existing researchers’ codebase to develop an open-source     web application that can serve both as a sophisticated     plant disease detection system and as an educational plat-     form for future developers and researchers in the field.     In this experiment, we make the following contributions:</p><ul style="white-space: pre-wrap;"><li><p>Tool Function: Our tool leverages ML and deep-         learning algorithms to accurately classify plant dis-         ease from images that can be used for diagnosis and         remediation suggestions.</p></li><li><p><br>         </p></li><li><p>           Impact: Our tool will be a step forward in improv-           ing global agriculture efforts, informing hobbyists,           and inspiring aspiring researchers through access to           a web platform that can be used as a product or boil-           erplate code repository to develop the tool further.         </p></li></ul><h2 style="white-space: pre-wrap;">Project Impact</h2><p style="white-space: pre-wrap;">     The impact of this project lies in its ability to serve as a guide for future works. Future researchers can use this project as a reference and a starting point for their research.    </p><p style="white-space: pre-wrap;">     A guide for plant disease classification can serve as an invaluable resource for a beginner in the field of machine learning by offering a comprehensive overview of both the practical application of machine learning techniques and the domain-specific challenges involved in diagnosing plant health. For novices, such a guide demystifies the process of applying machine learning algorithms to real-world problems, providing a concrete example of how data can be collected, processed, and used to make predictions or decisions—in this case, identifying various plant diseases based on symptoms presented in images or data sets.    </p><p style="white-space: pre-wrap;">      Furthermore, it introduces beginners to the interdisciplinary nature of applied machine learning, blending computer science with botany and plant pathology, thereby broadening their understanding and appreciation of the field. By tackling a specific task like plant disease classification, beginners can gain hands-on experience with data preprocessing, feature extraction, model selection, and evaluation metrics, all of which are foundational skills in machine learning. Additionally, such a guide can highlight the importance of domain expertise in developing effective machine learning solutions, showing how collaboration between machine learning practitioners and subject matter experts can lead to more accurate and meaningful outcomes.    </p><h2 style="white-space: pre-wrap;">References:</h2><ol style="white-space: pre-wrap;"><li><p>         UN Focus on Plant Health, Crucial for Boosting Food Security Worldwide | UN News. 12 May 2022, https://news.un.org/en/story/2022/05/1118102.       </p></li></ol><h2 style="white-space: pre-wrap;">Background</h2><p style="white-space: pre-wrap;"> [4] reviewed current deep learning methods for      identifying plant species and detecting diseases from leaf images.      Their review highlighted four key strategies:</p><p style="white-space: pre-wrap;"><img src="img/backbone model approaches.png" contenteditable="false" draggable="true">     </p><h3 style="white-space: pre-wrap;">Multi-Model</h3><p style="white-space: pre-wrap;">They constructed a dual-model ensemble comprising two convolutional neural networks (CNNs). One model focused on identifying plant species from leaf images, while the other was dedicated to disease prediction. To ensure a comprehensive analysis, the researchers employed various backbone CNN architectures for this approach, which included their custom model as well as established models like AlexNet, VGG16, ResNet101, EfficientNet, InceptionV3, and MobileNetV2.</p><h3 style="white-space: pre-wrap;">Multi-Label</h3><p style="white-space: pre-wrap;">They also created a single CNN architecture designed to output multiple ps. Additionally, this framework diverged from conventional multi-p learning methods mentioned in [5]. They combined  these ps to form a power-set p for predictions. Essentially,  used a unified p to represent multiple ps simultaneously. Additionally, they leveraged various backbone CNN architectures to support this methodology.</p><h3 style="white-space: pre-wrap;">Multi-Output</h3><p style="white-space: pre-wrap;">The researchers also created a single CNN model, similar to the                multi-p strategy. However, it differs by having                 separate output layers for each classification target.</p><h3 style="white-space: pre-wrap;">Multi-Task</h3><p style="white-space: pre-wrap;">Adopt a multi-task learning framework that targets            different objectives using data from the same dataset.</p><p style="white-space: pre-wrap;"><img src="img/model_ivan.png" contenteditable="false" draggable="true">     </p><p style="white-space: pre-wrap;">Novel Architecture</p><p style="white-space: pre-wrap;">Building on these methods, the authors introduced a novel      technique named Generalised Stacking Multi-output CNNs (GSMo-CNN).     This method combines some strengths of the aforementioned     approaches to enhance performance by creating a sequence of output      layers. This sequential structure forms a hierarchical      classification system aimed at accurately representing the      relationship between various plant species and their diseases      during analysis.</p><p style="white-space: pre-wrap;">         Furthermore, the study explored the effectiveness of          different CNN architectures (e.g., AlexNet, VGG16, InceptionV3)          across all four strategies by testing them on three well-known          plant disease image datasets:          </p><ul style="white-space: pre-wrap;"><li><p>               <a href="https://data.mendeley.com/datasets/tywbtsjrjv/1" target="_blank"> Plant Village [2]</a>             </p></li><li><p>               <a href="https://data.mendeley.com/datasets/hb74ynkjcn/1" target="_blank"> Plant Leaves [1]</a>             </p></li><li><p>               <a href="https://github.com/pratikkayal/PlantDoc-Dataset" target="_blank">Plant Doc [3]</a>             </p></li></ul><p style="white-space: pre-wrap;"> InceptionV3 emerged as the superior CNN architecture          for identifying plant species and predicting diseases.       </p><p style="white-space: pre-wrap;"><br class="ProseMirror-trailingBreak"></p><h2 style="white-space: pre-wrap;">References:</h2><ol style="white-space: pre-wrap;"><li><p>S. S. Chouhan. A Database of Leaf Images: Prac-     tice towards Plant Conservation with Plant Pathology,     June 2019.</p></li><li><p><br>     </p></li><li><p> D. P. Hughes and M. Salathe. An open access repos-       itory of images on plant health to enable the de-       velopment of mobile disease diagnostics, Apr. 2016.       arXiv:1511.08060 [cs].</p></li><li><p><br>     </p></li><li><p> D. Singh, N. Jain, P. Jain, P. Kayal, S. Kumawat, and       N. Batha. PlantDoc: A Dataset for Visual Plant Dis-       ease Detection. In Proceedings of the 7th ACM IKDD       CoDS and 25th COMAD, pages 249–253, Hyderabad       India, Jan. 2020. ACM.</p></li><li><p><br>       </p></li><li><p>J. Yao, S. N. than, S. Garg, and S. Sawyer. Deep         learning for plant identification and disease classifica-         tion from leaf images: Multi-prediction approaches.         ACM Comput. Surv., jan 2024. Just Accepted.         Page 3</p></li><li><p><br>       </p></li><li><p>         Gjorgji M, Dragi K, Dejan G, and Sašo D. 2012. An extensive experimental comparison of methods for multi-p learning. Pattern Recognition 45, 9 (2012), 3084–3104. DOI:https://doi.org/10.1016/j.patcog. 2012.03.004 Best Papers of Iberian Conference on Pattern Recognition and Image Analysis (IbPRIA’2011).       </p></li></ol><h2 style="white-space: pre-wrap;">Existing Technologies</h2><p style="white-space: pre-wrap;">There are several commercially available apps      that can identify infected plants. Some of these apps include:</p><p style="white-space: pre-wrap;"><img src="img/PlantSaverApp.jpeg" alt="plant Saver" contenteditable="false" draggable="true">       </p><h3 style="white-space: pre-wrap;">PlantSaver - Plants Identifier</h3><p style="white-space: pre-wrap;">           This app allows the user to identify the plants in front of them, determine the ideal watering schedule for the plants and provide some disease diagnosis.         </p><h3 style="white-space: pre-wrap;">Agrio: Plant Health App</h3><p style="white-space: pre-wrap;">           This app allows farmers and gardens to remotely monitor, identify and treat plant diseases in the field. The app offers a personalized experience by tailoring plant disease diagnostics and treatment plans to specific to an individual's needs.          </p><p style="white-space: pre-wrap;"><img src="img/Agrio.jpeg" alt="plant Saver" contenteditable="false" draggable="true">         </p><p style="white-space: pre-wrap;"><img src="img/PlantDiseaseidentifier.jpeg" alt="plant Saver" contenteditable="false" draggable="true">       </p><h3 style="white-space: pre-wrap;">Plant Disease Identifier</h3><p style="white-space: pre-wrap;">           This app allows the user to take a picture of a plant and through computer vision, the app determines if the plant is infected or not.         </p><p style="white-space: pre-wrap;">       All apps are all available on the Apple App Store.        Each app allows the user to take a picture of a plant,        and the app will determine whether or not the plant is        healthy. It is important to note that each app requires        a monthly subscription for uninterrupted usage.        Additionally, “Agrio” is the only service that offers        a web-based application, which requires a monthly        subscription. </p><h2 style="white-space: pre-wrap;">Our Conthibution</h2><p style="white-space: pre-wrap;">     For this project, this team developed a      free-to-use guide for beginners to the field of      Machine Learning who want to create their own Plant Disease      Classifier. This team will outline the steps involved,      including preprocessing techniques, model architectures, and evaluation metrics needed to create a robust model.   </p><h3 style="white-space: pre-wrap;">Experimentation</h3><p style="white-space: pre-wrap;">Our team performed several experiments in an effort to improve on the authors' GSMo-CNN model. These efforts included:     adding additional hidden layers and tuning several hyperparameters.    </p><h3 style="white-space: pre-wrap;">Tutorials</h3><p style="white-space: pre-wrap;">     We have developed tutorials tailored to individuals with varying levels of proficiency in deep learning, ranging from novice to expert. These tutorials serve as a comprehensive, step-by-step guide for executing the original authors’ code, augmented with our own additions, to train a model and generate predictions. It is meticulously crafted to accommodate those with minimal experience in the operational aspects of deep learning.</p><p style="white-space: pre-wrap;">       Engaging directly with the source code is irreplaceable in gaining a thorough understanding of the intricacies involved. Through customization of global parameters, such as model selection, dataset choice, batch size, epoch count, and iterations for performance metric consolidation via averaging, participants can glean invaluable insights into the conceptual and algorithmic foundations of deep learning.     </p><p style="white-space: pre-wrap;">       We cordially invite our readers to delve into the source code, notably 'thain_models.py,' and acquaint themselves with the diverse architectural nuances. Additionally, readily available resources via web search or consultation with generative AI can clearly explain the functionalities of various layers and methods.     </p><p style="white-space: pre-wrap;">       Furthermore, we advocate for experimentation with different global variables to observe how alterations in these hyperparameters affect model performance. The enigmatic nature of deep learning algorithms often yields fascinating results, underscoring their efficacy despite their inherent complexity.     </p><p style="white-space: pre-wrap;">     We believe that our readers will find the exploration of deep learning principles as captivating as we do, and we encourage their active participation in this endeavor.   </p><h3 style="white-space: pre-wrap;">Web Application</h3><p style="white-space: pre-wrap;">As part of our free to use guide, our team developed a web application that will allow users to quickly classify plant species and diseases. Our team decided to also include a standalone Machine Learning  product in which our readers can showcase the results of their model in a visually pleasing way.   </p><p style="white-space: pre-wrap;">     Our app allows a user to upload a picture of a plant. Then, the app will determine the plant's species and health, and will give some useful information on proper care and maintenance.   </p><h4 style="white-space: pre-wrap;">Here's A Prediction</h4><p style="white-space: pre-wrap;"><img src="img/strawberrypreiction.png" alt="image prediction" contenteditable="false" draggable="true">   </p><p style="white-space: pre-wrap;"> Please note that the app makes an API call to OpenAI's Large Language Model (LLM) in order to generate the additional  information on care and maintenance. If the users of our do not have an API key, the app will only classify the plant species and disease.  </p><h2 style="white-space: pre-wrap;">Results and Discussion</h2><p style="white-space: pre-wrap;">      As part of our team's contributions, we ran several experiments to determine if we could improve on authors' work.      Our team attempted to make several changes to the the authors’ original novel architecture, and trained our models on the PlantDoc dataset.    </p><h3 style="white-space: pre-wrap;">Experiment 1</h3><p style="white-space: pre-wrap;">     In this experiment, we made the following changes to the authors' proposed GSMo-CNN architecture:    </p><ol style="white-space: pre-wrap;"><li><p>         Additional set of convolutional layers: maintained original sequence of two sets of convolutional layer+pooling layer and added an additional set of convolutional layers to increase model depth, which can enhance the model's ability to learn more complex features.       </p></li><li><p>         Smaller pooling sizes: Adjusted original large pooling sizes of (8,8) to smaller pooling sizes of (2,2). This change should preserve more detailed information in the image data.       </p></li><li><p>         Use of Dilated Convolution: Introduced dilated convolutions in the new convolutional layers to increase the receptive field. This may allow the model to extract broader contextual information from the input data without significantly increasing the computational complexity.       </p></li><li><p>         Simplified pooling and flattening sequence: Added two more steps—AveragePooling2D and GlobalAveragePooling2D—before the flattening step following batch normalization. These steps help to simplify the model and reduce its complexity to better manage the overfitting that could result from previous increased depth of network.       </p></li></ol><p style="white-space: pre-wrap;"><br class="ProseMirror-trailingBreak"></p><h3 style="white-space: pre-wrap;">Experiment 2</h3><p style="white-space: pre-wrap;">     In this experiment, we adjusted the following:     </p><ol style="white-space: pre-wrap;"><li><p>           More Frequent Pooling of Smaller Sizes: A more gradual reduction in size in the first two pooling layers attempts to retain more information in earlier layers and possibly learn more features in an attempt to improve accuracy.         </p></li><li><p>           Smaller Pooling Strides: We tried smaller strides in all pooling layers can slow the loss of dimensionality and preserve more significant information that may have otherwise been lost at early stages in the overall convolution and is designed to improve accuracy.         </p></li><li><p>           Average Pooling Layer: We added average pooling for this third pooling layer, while the previous two pooling layers  preserves more significant information, this layer serves to smooth out the remaining significant information to prevent small variations to take on too much significance in an attempt to improve generality.          </p></li><li><p>           Smaller but Still Significant Pooling Size in Final Pooling Layer: We made the final pooling layer significantly smaller  than that of the original model. This large reduction was postponed until after the final convolutional layer in an attempt to preserve features in earlier stages and thereby increase accuracy.         </p></li><li><p>           No Convolutional Padding in First Layer After Pooling:             We removed the padding from the second convolutional layer. We aimed to reduce its emphasis on image boundaries, particularly following the initial pooling layer. This strategic choice was made in an effort to enhance accuracy, considering that the boundaries of the image hold less significance in earlier stages.          </p></li></ol><p style="white-space: pre-wrap;"><br class="ProseMirror-trailingBreak"></p><h3 style="white-space: pre-wrap;">Model Score Summary</h3><table style="white-space: pre-wrap;"><tbody><tr><th><p>Model</p></th><th><p>Plant Species Accuracy</p></th><th><p>Plant Species F1 Score</p></th><th><p>Plant Disease Accuracy</p></th><th><p>Plant Disease F1 Score</p></th><th><p>Plant Species and Disease Accuracy</p></th><th><p>Plant Species and Disease F1 Score</p></th></tr><tr><td><p>Authors' Model</p></td><td><p>0.404</p></td><td><p>0.394</p></td><td><p>0.461</p></td><td><p>0.444</p></td><td><p>0.2</p></td><td><p>0.202</p></td></tr><tr><td><p>Experiment 1</p></td><td><p>0.509</p></td><td><p>0.484</p></td><td><p>0.548</p></td><td><p>0.529</p></td><td><p>0.273</p></td><td><p>0.257</p></td></tr><tr><td><p>Experiment 2</p></td><td><p>0.416</p></td><td><p>0.402</p></td><td><p>0.469</p></td><td><p>0.453</p></td><td><p>0.214</p></td><td><p>0.209</p></td></tr></tbody></table><p style="white-space: pre-wrap;"><img src="img/Model Performance Summery.png" contenteditable="false" draggable="true">    </p><p style="white-space: pre-wrap;">     From the results of our experimentation above, it can be seen that all models performed poorly. Given the low accuracy and      F-1 scores, it is likely that all models are underfitting the data. With that said, experiment 1 achieved the best performance     and outperformed the authors' original model.      </p><p style="white-space: pre-wrap;">     Looking more closely at experiment 1, many of the changes increased the feature space and made the model more complex.     It appears that added complexity of increasing the number convolutional layers and reducing of pooling layer sizes led      to an improvement in performance. This improvement, however, came at the cost of increased training time     as more weights needed to be learnt.    </p><p style="white-space: pre-wrap;">     Experiment 2, on the other hand, did not produce any significant difference compared to the authors' model.     Looking more closely at experiment 2, many of the alterations reduced the feature space. That is, experiment 2 mainly lowered      the number of weights and produced a simpler model. With that said, the simpler model achieved similar performance compared the authors' model potentially because experiment 2 suffered less from overfitting.   </p><p style="white-space: pre-wrap;">     Even though experiment 1 improved on the performance of the authors' model by approximately 25%, its performance is still poor. Both the authors' model and experiment 1 frequently misclassified the plant species, disease and combination of the two. These results are likely because of the models being trained on the PlantDoc dataset. This dataset only contained 2,598 images with 13      classes of plant species and 17 classes of diseases. Given that we were training a model to simultaneously predict      plant species and disease. Given the limited number of samples, it is likely that models are underfitting, and we would likely need a lot more training examples so that the models better learn patterns and to prevent overfitting.    </p><h2 style="white-space: pre-wrap;">Tutorials and How to guide</h2><p style="white-space: pre-wrap;">Please select your desired tutorial from the list</p><p style="white-space: pre-wrap;">Training on WPI's HPC</p><p style="white-space: pre-wrap;">Training on HPC (in general)</p><p style="white-space: pre-wrap;">Training on Local hardware</p><h2 style="white-space: pre-wrap;">Conclusions and Reflections</h2><p style="white-space: pre-wrap;">On completing this project, we have created a free to use guide for newcomers to the field of Machine Learning      to develop a Plant Species and Disease classification model. As part of this endeavor, we created tutorials and a standalone web application.    </p><p style="white-space: pre-wrap;"> With our project as a guide, our readers will not only have a framework to build their own models, but they will also have a means of showcasing their work.   </p><p style="white-space: pre-wrap;">     Regarding improving the performance of our models, we believe that training on more data will yield better results. With more data, the models will become better at identifying patterns, which will lead to higher classification accuracy.        </p><p style="white-space: pre-wrap;">      AI has completely revolutionized the field of plant pathology, and expensive research is constantly being conducted.     We believe that this project can serve as a stepping stone for future endeavors.   </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plant Disease Detection and Diagnosis using AI and Machine Learning</title>
+<style>
+  body { font-family: Arial, sans-serif; }
+  .menu { overflow: hidden; background-color: #37683b; }
+  .menu a { float: left; display: block; color: white; text-align: center; padding: 14px 20px; text-decoration: none; }
+  .dropdown { float: left; overflow: hidden; }
+  .dropdown .dropbtn { font-size: 16px; border: none; outline: none; color: white; padding: 14px 20px; background-color: inherit; font-family: inherit; margin: 0; cursor: pointer; }
+  .dropdown-content { display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; }
+  .dropdown-content a { float: none; color: black; padding: 12px 16px; text-decoration: none; display: block; text-align: left; cursor: pointer; }
+  .dropdown-content a:hover { background-color: #ddd; }
+  .dropdown:hover .dropdown-content { display: block; }
+  .content-section { display: none; width: 800px; }
+  .team-member { margin: 20px; text-align: center; }
+  .team-member img { width: 100px; height: auto; border-radius: 50%; }
+  .team-member p { margin-top: 5px; }
+  
+  .sub-section { margin-left: 20px; }
+  .sub-section h3 { font-size: 16px; }
+  .sub-section p, .sub-section ul { font-size: 14px; }
+
+  .container {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  width: 750px;
+  margin-left: 20px; 
+}
+
+.left_column {
+  width: 49%;
+  text-align: left;
+}
+
+.right_column{
+  width: 49%;
+  text-align: left;
+}
+
+.image {
+  padding: 10px;
+}
+
+.text {
+  padding: 10px;
+}
+
+.column-text {
+  width: 49%;
+  padding: 10px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.collapsible {
+  background-color: #a8aaa8;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: solid;
+  text-align: left;
+  font-weight: bold;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #808281;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: auto;
+  height: 750px;
+   transition: max-height 0.2s ease-out;
+  background-color: #fefefe;
+}
+</style>
+
+</style>
+<!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
+<script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+
+<!-- Load the element definition -->
+<script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+
+<script>
+function toggleSection(sectionId) {
+    var sections = document.querySelectorAll('.content-section');
+    sections.forEach(function(sec) {
+        sec.style.display = 'none';
+    });
+
+    var selectedSection = document.getElementById(sectionId);
+    if (selectedSection) {
+        selectedSection.style.display = 'block';
+    }
+}
+</script>
+</head>
+<body>
+
+<div class="menu">
+  <a href="#home" onclick="toggleSection('homeSection')">Home</a>
+  <a href="javascript:void(0);" onclick="toggleSection('teamSection')">Meet the Team</a>
+  <div class="dropdown">
+    <button class="dropbtn" onclick="toggleSection('')">Project Details
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="javascript:void(0);" onclick="toggleSection('motivationSection')">Motivation</a>
+      <a href="javascript:void(0);" onclick="toggleSection('timelineSection')">Background</a>
+      <a href="javascript:void(0);" onclick="toggleSection('detailsSection')">Existing Applications</a>
+      <a href="javascript:void(0);" onclick="toggleSection('detailsSection2')">Our Conthibution</a>
+      <a href="javascript:void(0);" onclick="toggleSection('motivationSection2')">Results and Discussions</a>
+      <a href="javascript:void(0);" onclick="toggleSection('timelineSection2')">Turorials, Guides, and Repository</a>
+      <a href="javascript:void(0);" onclick="toggleSection('detailsSection3')">Conslusions and Reflections</a>
+
+    </div>
+  </div> 
+</div>
+
+
+<div id="homeSection" class="content-section" style="display:block;">
+  <h1>ML Group Project</h1>
+  <p>Our project will develop an open-source web application that leverages advanced Convolutional Neural Networks to provide accurate and 
+    efficient plant disease detection and diagnosis, facilitating agricultural productivity, and serving as an educational tool for technology and agriculture enthusiasts.</p>
+  <h2>Our Web App</h2>
+  <h3><a href="https://demo.shrestha.club">https://demo.shrestha.club</a></h3>  <a href="https://demo.shrestha.club">
+    <img src="img/webAllScreenShot.png" alt="Our Web App" width="850" height="400">
+  </a>
+ 
+</div>
+
+
+<div id="teamSection" class="content-section">
+  <h2>Our Team</h2>
+  <div class="team-member">
+    <img src="img/ChadHucey.png" alt="Leonardo">
+    <p>Hi, I’m Chad and I’m originally from Kingston, Jamaica. I studied Mechanical Engineering as an undergrad at WPI and then thansitioned to Data Science. I really like to watch soccer and Formula 1 - I’m an avid fan of both sports. 
+      I would really like to see a live formula 1 event in the future.	</p>
+  </div>
+  <div class="team-member">
+    <img src="img/Dan_Headshot.jpg" alt="Michelangelo">
+    <p>Dan Fox is enrolled in a Master of Science in Data Science program at Worcester Polytechnic Institute and expects to get his degree in December 2024. He has 22 years of previous experience in software engineering development, focused largely on network-based embedded software. 
+      He received his undergraduate degree from the Massachusetts Institute of Technology.</p>
+  </div>
+  <div class="team-member">
+    <img src="img/IvanLim.jpg" alt="Donatello">
+    <p>Ivan Lim is currently pursuing a PhD in Data Science in Worcester Polytechnic Institute. Specifically, he focuses on the growing prevalence of online learning platforms within the educational sector and teachers' use of these platforms. 
+      His research aims to analyze teachers' digital pedagogy, utilizing digital footprints or log files from these platforms, to understand their impact on student learning outcomes. </p>
+  </div>
+  <div class="team-member">
+    <img src="img/bijesh.png" alt="Raphael">
+    <p>Bijesh is an active-duty Army officer currently pursuing a PhD in Data Science, with a focus on AI applications in data visualization, specifically aimed at enhancing collaboration and decision-making. In his leisure time, he enjoys engaging in outdoor activities such as fishing, hunting, hiking, and kayaking, alongside tackling various home improvement projects.</p>
+  </div>
+  <div class="team-member">
+    <img src="img/splinter.jpg" alt="Splinter">
+    <p>Splinter - The mentor. Guides the team with wisdom and provides invaluable advice.</p>
+  </div>
+</div>
+
+<!Sections for Project Details>
+<div id="motivationSection" class="content-section">
+  <h2>Motivation</h2>
+
+  <p>
+    Between 20% to 40% of global crop production is lost due to pests annually. Furthermore, plant diseases cost the global economy around $220 billion according to the Food and Agriculture Organization of the United Nations [1]. 
+  </p>
+  <p>Research into the domain of plant disease detection using 
+    computer vision capabilities has piqued the interest of 
+    researchers from both the academic and industhial
+    sides alike. We are growing accustomed to having various
+    machine-learning applications that help us with difficult
+    tasks, such as plant disease identification with varied levels
+    of accuracy and usability.</p>
+    <p>Many disease prediction efforts rely solely on examining
+       images of plant leaves. However, there is an increasing
+        demand for not only classifying diseases but also plant 
+        species. A multi dimensional classification solution would
+         be much more atthactive, especially for large-scale crop 
+         management.  </p>
+    <p> This project is driven by
+    the potential of convolutional neural networks (CNNs) to
+    significantly advance the identification process of plant
+    ailments with a higher accuracy and efficiency that were
+    previously unattainable.</p>
+    <p> Our thesis explores advanced
+    disease identification methods in plants through an active
+    literature review and thanslating these techniques into a
+    practical, user-friendly tool. We aim to expand on an
+    existing researchers’ codebase to develop an open-source
+    web application that can serve both as a sophisticated
+    plant disease detection system and as an educational plat-
+    form for future developers and researchers in the field.
+    In this experiment, we make the following conthibutions:</p>
+    <ul>
+      <li>Tool Function: Our tool leverages ML and deep-
+        learning algorithms to accurately classify plant dis-
+        ease from images that can be used for diagnosis and
+        remediation suggestions.</li><br/>
+        <li>
+          Impact: Our tool will be a step forward in improv-
+          ing global agriculture efforts, informing hobbyists,
+          and inspiring aspiring researchers through access to
+          a web platform that can be used as a product or boil-
+          erplate code repository to develop the tool further.
+        </li>
+      </ul>
+      <h2>Project Impact</h2>
+  <p>
+    The impact of this project lies in its ability to serve as a guide for future works. Future researchers can use this project as a reference and a starting point for their research. 
+  </p>
+  <p>
+    A guide for plant disease classification can serve as an invaluable resource for a beginner in the field of machine learning by offering a comprehensive overview of both the practical application of machine learning techniques and the domain-specific challenges involved in diagnosing plant health. For novices, such a guide demystifies the process of applying machine learning algorithms to real-world problems, providing a concrete example of how data can be collected, processed, and used to make predictions or decisions—in this case, identifying various plant diseases based on symptoms presented in images or data sets. 
+  </p>
+  <p>
+     Furthermore, it inthoduces beginners to the interdisciplinary nature of applied machine learning, blending computer science with botany and plant pathology, thereby broadening their understanding and appreciation of the field. By tackling a specific task like plant disease classification, beginners can gain hands-on experience with data preprocessing, feature exthaction, model selection, and evaluation methics, all of which are foundational skills in machine learning. Additionally, such a guide can highlight the importance of domain expertise in developing effective machine learning solutions, showing how collaboration between machine learning practitioners and subject matter experts can lead to more accurate and meaningful outcomes.
+
+  </p> 
+
+    <h2>References:</h2>
+    <ol>
+      <li>
+        UN Focus on Plant Health, Crucial for Boosting Food Security Worldwide | UN News. 12 May 2022, https://news.un.org/en/story/2022/05/1118102.
+      </li>
+    </ol>
+</div>
+<div id="timelineSection" class="content-section">
+  <h2>Background</h2>
+  <p> [4] reviewed current deep learning methods for 
+    identifying plant species and detecting diseases from leaf images.
+     Their review highlighted four key sthategies:</p>
+
+     <div>
+      <img src="img/backbone model approaches.png" width="750", height="350">
+    </div>
+     <div class="container">
+     <div class="left_column">
+      <div class="text">
+        <h3>Multi-Model</h3>
+        <p>They consthucted a dual-model ensemble comprising two convolutional neural networks (CNNs). One model focused on identifying plant species from leaf images, while the other was dedicated to disease prediction. To ensure a comprehensive analysis, the researchers employed various backbone CNN architectures for this approach, which included their custom model as well as established models like AlexNet, VGG16, ResNet101, EfficientNet, InceptionV3, and MobileNetV2.</p>
+      </div>
+     </div>
+     <div class="right_column">
+<div class="text">
+  <h3>Multi-Label</h3>
+  <p>They also created a single CNN architecture designed to output multiple ps. Additionally, this framework diverged from conventional multi-p learning methods mentioned in [5]. They combined  these ps to form a power-set p for predictions. Essentially,  utilized a unified p to represent multiple ps simultaneously. Additionally, they leveraged various backbone CNN architectures to support this methodology.</p>
+</div>
+     </div>
+          </div>
+
+          <div class="container">
+            <div class="left_column">
+             <div class="text">
+              <h3>Multi-Output</h3>
+              <p>The researchers also created a single CNN model, similar to the
+               multi-p sthategy. However, it differs by having 
+               separate output layers for each classification target.</p>
+             </div>
+            </div>
+            <div class="right_column">
+       <div class="text">
+        <h3>Multi-Task</h3>
+        <p>Adopt a multi-task learning framework that targets 
+          different objectives using data from the same dataset.</p>
+       </div>
+            </div>
+                 </div>
+   
+<div class="container" style="align-items: center;">
+  <div>
+    <img src="img/model_ivan.png" height="400", width="350">
+    <p style="text-align: center;">Novel Architecture</p>
+  </div>
+<div class="text">
+  <p>Building on these methods, the authors inthoduced a novel 
+    technique named Generalised Stacking Multi-output CNNs (GSMo-CNN).
+    This method combines some sthengths of the aforementioned
+    approaches to enhance performance by creating a sequence of output 
+    layers. This sequential sthucture forms a hierarchical 
+    classification system aimed at accurately representing the 
+    relationship between various plant species and their diseases 
+    during analysis.</p> 
+</div>
+</div>
+           <p>
+        Furthermore, the study explored the effectiveness of 
+        different CNN architectures (e.g., AlexNet, VGG16, InceptionV3) 
+        across all four strategies by testing them on three well-known 
+        plant disease image datasets: 
+        <ul>
+          <li>
+            <p>
+              <a href="https://data.mendeley.com/datasets/tywbtsjrjv/1"> Plant Village [2]</a>
+            </p>
+           
+          </li>
+          <li>
+            <p>
+              <a href="https://data.mendeley.com/datasets/hb74ynkjcn/1"> Plant Leaves [1]</a>
+            </p>
+    
+          </li>
+          <li>
+            <p>
+              <a href="https://github.com/pratikkayal/PlantDoc-Dataset">Plant Doc [3]</a>
+            </p>
+            
+          </li>
+        </ul> InceptionV3 emerged as the superior CNN architecture 
+        for identifying plant species and predicting diseases.
+      </p>
+      
+  <div><h2>References:</h2>
+    <ol>
+      <li>S. S. Chouhan. A Database of Leaf Images: Prac-
+    tice towards Plant Conservation with Plant Pathology,
+    June 2019.</li> <br/>
+    <li> D. P. Hughes and M. Salathe. An open access repos-
+      itory of images on plant health to enable the de-
+      velopment of mobile disease diagnostics, Apr. 2016.
+      arXiv:1511.08060 [cs].</li><br/>
+    <li> D. Singh, N. Jain, P. Jain, P. Kayal, S. Kumawat, and
+      N. Batha. PlantDoc: A Dataset for Visual Plant Dis-
+      ease Detection. In Proceedings of the 7th ACM IKDD
+      CoDS and 25th COMAD, pages 249–253, Hyderabad
+      India, Jan. 2020. ACM.</li>  <br/>
+      <li>J. Yao, S. N. than, S. Garg, and S. Sawyer. Deep
+        learning for plant identification and disease classifica-
+        tion from leaf images: Multi-prediction approaches.
+        ACM Comput. Surv., jan 2024. Just Accepted.
+        Page 3</li> <br/>
+      <li>
+        Gjorgji M, Dragi K, Dejan G, and Sašo D. 2012. An extensive experimental comparison of methods for multi-p learning. Pattern Recognition 45, 9 (2012), 3084–3104. DOI:https://doi.org/10.1016/j.patcog. 2012.03.004 Best Papers of Iberian Conference on Pattern Recognition and Image Analysis (IbPRIA’2011).
+      </li> </ol>   
+  </div>
+    
+</div>
+<div id="detailsSection" class="content-section">
+  <h2>Existing Technologies</h2>
+  <p>There are several commercially available apps
+     that can identify infected plants. Some of these apps include:</p>
+
+     <div class="container">
+      <div>
+        <img src="img/PlantSaverApp.jpeg" alt="plant Saver" height="150" width="150">
+      </div>     
+      <div class="text">
+        <h3>PlantSaver - Plants Identifier</h3>
+        <p>
+          This app allows the user to identify the plants in front of them, determine the ideal watering schedule for the plants and provide some disease diagnosis.
+        </p>
+        </div>
+     </div>
+
+     <div class="container">
+          <div class="text">
+        <h3>Agrio: Plant Health App</h3>
+        <p>
+          This app allows farmers and gardens to remotely monitor, identify and theat plant diseases in the field. The app offers a personalized experience by tailoring plant disease diagnostics and theatment plans to specific to an individual's needs. 
+        </p>
+        </div>
+        <div>
+          <img src="img/Agrio.jpeg" alt="plant Saver" height="150" width="150">
+        </div> 
+     </div>
+                  
+     <div class="container">
+      <div>
+        <img src="img/PlantDiseaseidentifier.jpeg" alt="plant Saver" height="150" width="150">
+      </div>     
+      <div class="text">
+        <h3>Plant Disease Identifier</h3>
+        <p>
+          This app allows the user to take a picture of a plant and through computer vision, the app determines of the plant is infected ir not.
+        </p>
+        </div>
+     </div>
+           
+     <p>
+      All apps are all available on the Apple App Store. 
+      Each app allows the user to take a picture of a plant, 
+      and the app will determine whether or not the plant is 
+      healthy. It is important to note that each app requires 
+      a monthly subscription for uninterrupted usage. 
+      Additionally, “Agrio” is the only service that offers 
+      a web-based application, which requires a monthly 
+      subscription. </p>
+     
+</div>
+<div id="detailsSection2" class="content-section">
+  <h2>Our Conthibution</h2>
+  <p>
+    For this project, this team developed a 
+    free-to-use guide for beginners to the field of 
+    Machine Learning who want to create their own Plant Disease 
+    Classifier. This team will outline the steps involved, 
+    including preprocessing techniques, model architectures, and evaluation methics needed to create a robust model.
+  </p>
+
+  <h3>Experimentation</h3>
+  <p>Our team performed several experiemnts in an effort to improve on the authors' GSMo-CNN model. These efforts included:
+    adding additional hidden layers and tuning several hyperparaeters. 
+  </p>
+
+  <h3>Tutorials</h3>
+  <p>
+    We have developed tutorials tailored to individuals with varying levels of proficiency in deep learning, ranging from novice to expert. These tutorials serve as a comprehensive, step-by-step guide for executing the original authors’ code, augmented with our own additions, to thain a model and generate predictions. It is meticulously crafted to accommodate those with minimal experience in the operational aspects of deep learning.</p>
+
+    <p>
+      Engaging directly with the source code is irreplaceable in gaining a thorough understanding of the inthicacies involved. Through customization of global parameters, such as model selection, dataset choice, batch size, epoch count, and iterations for performance methic consolidation via averaging, participants can glean invaluable insights into the conceptual and algorithmic foundations of deep learning.
+    </p>
+    
+    <p>
+      We cordially invite our readers to delve into the source code, notably 'thain_models.py,' and acquaint themselves with the diverse architectural nuances. Additionally, readily available resources via web search or consultation with generative AI can clearly explain the functionalities of various layers and methods.
+    </p>
+   
+    <p>
+      Furthermore, we advocate for experimentation with different global variables to observe how model performance is affected by alterations in these hyperparameters. The enigmatic nature of deep learning algorithms often yields fascinating results, underscoring their efficacy despite their inherent complexity.
+    </p>
+    
+    <p>
+    We believe that our readers will find the exploration of deep learning principles as captivating as we do, and we encourage thier active participation in this endeavor.
+  </p>
+
+<h3>Web Application</h3>
+<p>As part of our free to use guide, our team developed a web application that will allow users to quickly classify plant species and diseases. Our team decided to also include a standalone Machine Learning 
+product in which our readers can showcase the results of their model in a visually pleasing way.  
+</p>
+
+  <p>
+    Our app allows a user to upload a picture of a plant. Then, the app will determine the plant's species and health, and will give some useful information on proper care and maintenance.
+  </p>
+  <div>
+    <h4>Here's A Prediction</h4>
+    <img src="img/strawberrypreiction.png" alt="image prediction" width="850" height="600">
+  </div>
+ 
+
+<p>
+Please note that the app makes an API call to OpenAI's Large Languae Model (LLM) in order to generate the additional 
+information on care and maintenance. If the users of our do not have an API key, the app will only classify the plant species and disease. 
+</p> 
+
+
+</div>
+<!Sections for Project Details - Second Set>
+<div id="motivationSection2" class="content-section">
+  <h2>Results and Discussion</h2>
+  <p> 
+    As part of our team's conthibutions, we ran several experiments to determine if we could improve on authors' work. 
+    Our team attemped to make several changes to the the authors’ original novel architecture, and trainedd our models on the PlantDoc dataset. 
+  </p>
+  <h3>Experiment 1</h3>
+  <p>
+    In this experiment, we made the following changes to the authors' proposed GSMo-CNN architecture:
+   <ol>
+    <li>
+      <p>
+        Additional set of convolutional layers: maintained original sequence of two sets of convolutional layer+pooling layer and added an additional set of convolutional layers to increase model depth, which can enhance the model's ability to learn more complex features.
+      </p>
+    </li>
+    <li>
+      <p>
+        Smaller pooling sizes: Adjusted original large pooling sizes of (8,8) to smaller pooling sizes of (2,2). This change should preserve more detailed information in the image data.
+      </p>
+    </li>
+    <li>
+      <p>
+        Use of Dilated Convolution: Introduced dilated convolutions in the new convolutional layers to increase the receptive field. This may allow the model to exthact broader contextual information from the input data without significantly increasing the computational complexity.
+      </p>
+    </li>
+    <li>
+      <p>
+        Simplified pooling and flattening sequence: Added two more steps—AveragePooling2D and GlobalAveragePooling2D—before the flattening step following batch normalization. These steps help to simplify the model and reduce its complexity to better manage the overfitting that could result from previous increased depth of network.
+      </p>
+    </li>
+   </ol>
+  </p>
+
+  <h3>Experiment 2</h3>
+  <p>
+    In this experiment, we adjusted the following:
+    <ol>
+      <li>
+        <p>
+          More Frequent Pooling of Smaller Sizes: A more gradual reduction in size in the first two pooling layers attempts to retain more information in earlier layers and possibly learn more features in an attempt to improve accuracy.
+        </p>
+      </li>
+      <li>
+        <p>
+          Smaller Pooling Strides: We tried smaller strides in all pooling layers can slow the loss of dimensionality and preserve more significant information that may have otherwise been lost at early stages in the overall convolution and is designed to improve accuracy.
+        </p>
+      </li>
+      <li>
+        <p>
+          Average Pooling Layer: We added average pooling for this third pooling layer, while the previous two pooling layers  preserves more significant information, this layer serves to smooth out the remaining significant information to prevent small variations to take on too much significance in an attempt to improve generality. 
+        </p>
+      </li>
+      <li>
+        <p>
+          Smaller but Still Significant Pooling Size in Final Pooling Layer: We made the final pooling layer significantly smaller  than that of the original maodel. This large reduction was postponed until after the final convolutional layer in an attempt to preserve features in earlier stages and thereby increase accuracy.
+        </p>
+      </li>
+      <li>
+        <p>
+          No Convolutional Padding in First Layer After Pooling: 
+           We removed the padding from the second convolutional layer. We aimed to reduce its emphasis on image boundaries, particularly following the initial pooling layer. This strategic choice wass made in an effort to enhance accuracy, considering that the boundaries of the image hold less significance in earlier stages. 
+        </p>
+      </li>
+     </ol>
+  </p>
+  
+  <h3>Model Score Summary</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Model</th>
+        <th>Plant Species Accuracy</th>
+        <th>Plant Species F1 Score</th>
+        <th>Plant Disease Accuracy</th>
+        <th>Plant Disease F1 Score</th>
+        <th>Plant Species and Disease Accuracy</th>
+        <th>Plant Species and Disease F1 Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Authors' Model</td>
+        <td>0.404</td>
+        <td>0.394</td>
+        <td>0.461</td>
+        <td>0.444</td>
+        <td>0.2</td>
+        <td>0.202</td>
+      </tr>
+      <tr>
+        <td>Experiment 1</td>
+        <td>0.509</td>
+        <td>0.484</td>
+        <td>0.548</td>
+        <td>0.529</td>
+        <td>0.273</td>
+        <td>0.257</td>
+      </tr>
+      <tr>
+        <td>Experiment 2</td>
+        <td>0.416</td>
+        <td>0.402</td>
+        <td>0.469</td>
+        <td>0.453</td>
+        <td>0.214</td>
+        <td>0.209</td>
+      </tr>
+    </tbody>   
+  </table>
+
+  <img src="img/Model Performance Summery.png" width="800" height="450">
+
+  <p>
+    From the results of our experimentation above, it can seen that all models performed poorly. Given the low accuacy and 
+    F-1 scores, it is likely that all models are underfitting the data. With that said, experiment 1 achieved the best perfimrance
+    and outperformed the authors' orignal model.   
+  </p>  
+  <p>
+    Looking more closely at experiment 1, many of the changes increased the feature space and made the model more complex.
+    It appears that added complexity of increasing the number convolutional layers and reducing of pooling layer sizes lead 
+    to an improvement in performance. This improvement, however, came at the cost of increased training time
+    as more weights needed to be learnt. 
+  </p>
+  <p>
+    Experiment 2, on the other hand, did not produce any significant difference compared to the authors' model.
+    Looking more closely at experiment 2, many of the alterations reduced the feature space. That is, experiment 2 mainly lowered 
+    the number of weights and produced a simpler model. With that said, the simpler model achieved similar performance compared the authors' model potentially becasue experiment 2 suffered less from overfitting.
+  </p>
+  <p>
+    Even though experiement 1 improved on the performance of the authors' model by approximately 25%, its preformance is still poor. Both the authors' model and experiement 1 frequently misclassifed the plant species, disease and combination of the two. These results are likely due to the models being trained on the PlantDoc dataset. This dataset only contained 2,598 images with 13 
+    classes of plant species and 17 classes of diseases. Given that we were training a model to simultaneously predict 
+    plant species and disease. Given the limited number of samples, it is likely that models are underfitting, and we would likely need a lot more training examples so that the models better learn patterns and to prevent overfitting. 
+  </p>
+ 
+
+</div>
+<div id="timelineSection2" class="content-section">
+  <h2>Tutorials and How to guide</h2>
+  <p>Please select your desired tutorial from the list</p>
+  <button class="collapsible">Training on WPI's HPC</button>
+  <div class="content">
+    <zero-md src="PDInstTrainTuring.md"></zero-md>
+  </div>
+  <button class="collapsible">Training on HPC (in general)</button>
+  <div class="content">
+    <zero-md src="PDInstTrainHPC.md"></zero-md>
+  </div>
+  <button class="collapsible">Training on Local hardware</button>
+  <div class="content">
+    <zero-md src="PDInstTrainLocal.md"></zero-md>
+  </div>
+
+  
+</div>
+<div id="detailsSection3" class="content-section">
+  <h2>Conclusions and Reflections</h2>
+  <p>On completing this project, we have created a free to use guide for new comers to the field of Machine Learning 
+    to develop a Plant Species and Disease classification model. As part of this endeaver, we created tutorials and a standalone web application. 
+  </p>
+  <p>
+With our project as a guide, our readers will not only have framework to build their own models, but they will also have a means of showcasing their work.
+  </p>
+  <p>
+    With regards to improving the performance of our models, we believe that training on more data will yeild better results. With more data, the models will become better at identifying patterns, which will lead to higher classification accuracy. 
+      </p>
+  <p> 
+    AI has completely revolutionalized the field of plant pathogy, and expensive research is constantly being conducted.
+    We believe that this project can serve as a stepping stone for future endeavers.
+  </p>
+</div>
+<div style="height:2000px"></div> 
+
+<script>
+// Ensure the team section is hidden on page load
+document.querySelectorAll('.content-section').forEach(function(section) {
+  section.style.display = 'none';
+});
+document.getElementById('homeSection').style.display = 'block'; // Show the home section by default
+</script>
+
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } 
+    });
+  }
+  </script>
+</body>
+</html>

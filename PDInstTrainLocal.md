@@ -7,7 +7,7 @@ title:
 
 Please note that this tutorial is for a Linux environment only
 (Turing is a local environment, but your local machine may not be).
-However, if you are familiar with a Windows or Mac command-line,
+However, if you are familiar with Windows or Mac command-line,
 then adapting these instructions should not be too much trouble.
 
 # Setup Local Machine
@@ -21,7 +21,7 @@ directory.
    a. We used cuda version 11.2 - we don't know if other versions are supported.
 2. 6GB of GPU memory minimum if you use a GPU with the PlantDoc datasets. (Which this tutorial uses).
 3. Use of the plant_village dataset (not used in this tutorial) will require more than 6GB, but we are unsure as to how much more. What we do know is that 40GB is sufficient.
-4. Our empirical testing shows that A100 preforms much better than V100.
+4. Our empirical testing shows that A100 performs much better than V100.
 5. You may want to run with more than one GPU, but that is also not required.
 6. We know Python 3.7.13 works with this code -
    we don't know what other versions may be supported.
@@ -33,7 +33,7 @@ and install Anaconda.
 
 ## Create Conda Environment and Install Packages
 
-Choose a name for your enviornment. Replace "my_env" with that name throughout this document.
+Choose a name for your environment. Replace "my_env" with that name throughout this document.
 
 Execute the following commands:
 

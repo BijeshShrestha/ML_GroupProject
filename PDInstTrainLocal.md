@@ -1,18 +1,18 @@
----
+<!-- ---
 output:
   html_document: default
 title:
   Instructions For Training and Prediction Locally
----
+--- -->
 
-Please note that this tutorial is for a Linux environment only 
-(Turing is a local environment, but your local machine may not be). 
-However, if you are familiar with a Windows or Mac command-line, 
+Please note that this tutorial is for a Linux environment only
+(Turing is a local environment, but your local machine may not be).
+However, if you are familiar with a Windows or Mac command-line,
 then adapting these instructions should not be too much trouble.
 
 # Setup Local Machine
 
-Throughout this document, "/home/user" should be replaced with your own home 
+Throughout this document, "/home/user" should be replaced with your own home
 directory.
 
 ## Hardware Requirements:
@@ -23,12 +23,12 @@ directory.
 3. Use of the plant_village dataset (not used in this tutorial) will require more than 6GB, but we are unsure as to how much more. What we do know is that 40GB is sufficient.
 4. Our empirical testing shows that A100 preforms much better than V100.
 5. You may want to run with more than one GPU, but that is also not required.
-6. We know Python 3.7.13 works with this code - 
-we don't know what other versions may be supported.
+6. We know Python 3.7.13 works with this code -
+   we don't know what other versions may be supported.
 
 ## Install Anaconda
 
-Go to https://anadconda.com/download and follow the instructions to download 
+Go to https://anadconda.com/download and follow the instructions to download
 and install Anaconda.
 
 ## Create Conda Environment and Install Packages
@@ -60,7 +60,7 @@ Execute the following commands:
 
 ## Clone Repositories
 
-Choose a directory to store the repositories in. Replace "/home/user/git" with 
+Choose a directory to store the repositories in. Replace "/home/user/git" with
 the name of the parent directory of your repositories throughout this document.
 
 Execute the following commands:
@@ -75,7 +75,7 @@ Execute the following commands:
     git clone https://github.com/pratikkayal/PlantDoc-Dataset
     mv PlantDoc-Dataset /home/user/git/plant_pathology_dl/Datasets/PlantDoc_original
 
-Please remove the folder Tomato two spotted spider mites leaf which has only 
+Please remove the folder Tomato two spotted spider mites leaf which has only
 two pictures in the train folder first.
 
 Please keep the test folder and the train folder. Erase the other files.
@@ -87,7 +87,7 @@ Please keep the test folder and the train folder. Erase the other files.
     cd /home/user/git/plant_pathology_dl
     vi main.py <== or use your favorite editor
 
-To run the best model on the best dataset 
+To run the best model on the best dataset
 (that is, the combination most accurate),
 use the following settings (global variables) in main.py:
 
@@ -102,7 +102,7 @@ use the following settings (global variables) in main.py:
     times = 10
     model_name = 'Inception'
 
-Note that you may want to set the 'saverun' subdirectory in save_path 
+Note that you may want to set the 'saverun' subdirectory in save_path
 to be something unique to this particular instance of training
 
 Now execute the following, which will train the model:
@@ -114,21 +114,21 @@ Now execute the following, which will train the model:
 
 ## Performance metrics and Weights
 
-Once training is complete, various performance metrics are 
-output to the console/stdout and to *.txt files.
+Once training is complete, various performance metrics are
+output to the console/stdout and to \*.txt files.
 
-The directory structure created will depend on all of the global variables set 
+The directory structure created will depend on all of the global variables set
 in /home/user/git/plant_pathology_dl/main.py
 
 The weights will be in a file in this directory structure.
 
 For this document's global variable settings (see main.py setup), the file specification of the weights file is:
 
-/home/user/git/plant_pathology_dl/saverun/PlantDoc_original_new_model/PlantDoc_original_new_model/model_save/Inception/new_model___No_9/model_0.5067fig_size_256/PlantDoc_original_new_model_Inception_multi_tasks.h5
+/home/user/git/plant_pathology_dl/saverun/PlantDoc_original_new_model/PlantDoc_original_new_model/model_save/Inception/new_model\_\_\_No_9/model_0.5067fig_size_256/PlantDoc_original_new_model_Inception_multi_tasks.h5
 
 This file specification was built from those global variables. If {obj} is the value of the global variable obj, and other variables, like {item}, are also the value of the global variable item, then the file specification can be encoded as:
 
-/home/user/git/plant_pathology_dl/saverun/{item}_{obj}/{item}_{obj}/model_save/{model_name}/{obj}___No_{time}/model_0.5067fig_size_256/{item}_{obj}_{model_name}_multi_tasks.h5
+/home/user/git/plant*pathology_dl/saverun/{item}*{obj}/{item}\_{obj}/model*save/{model_name}/{obj}*\_\_No\_{time}/model*0.5067fig_size_256/{item}*{obj}\_{model_name}\_multi_tasks.h5
 
 Now copy the weights file (.h5) from the above into the /home/user/git/ML_GroupProject directory. Give it a much shorter name.
 
@@ -140,15 +140,15 @@ Now edit the classifier.py file:
     cd /Users/user/git/ML_GroupProject
     vi classifier.py <== or use your favorite editor
 
-and set MODEL_PATH in classifier.py to be the file specification 
+and set MODEL_PATH in classifier.py to be the file specification
 of the weights (.h5) file
 
     MODEL_PATH = "pd_weights.h5"
 
 # Start Web App
 
-On the local machine, if you wish to consult ChatGPT for remediation, and you 
-possess an API key, set the OPENAI_API_KEY environment variable to the API 
+On the local machine, if you wish to consult ChatGPT for remediation, and you
+possess an API key, set the OPENAI_API_KEY environment variable to the API
 key.
 
 Run the following:
@@ -156,6 +156,6 @@ Run the following:
     cd /Users/user/git/ML_GroupProject
     streamlit run main.py
 
-A web page using your default web browser will display. Follow the instructions 
-on the page to upload a leaf picture. The classifier will run and display the 
+A web page using your default web browser will display. Follow the instructions
+on the page to upload a leaf picture. The classifier will run and display the
 plant type and disease.

@@ -14,11 +14,11 @@
 
 ### Tutorial on how to run the project locally and on the HPC 
 
-    Tutorial is included in the repository as "PDInstTrainLocal.md", "PDInstTrainHPC.md", and "PDInstTrainTuring.md" files in "tutorials" folder. This infomation is also included in the project website at [▶️ Project Website](https://bijeshshrestha.github.io/ML_GroupProject/)
+Tutorial is included in the repository as "PDInstTrainLocal.md", "PDInstTrainHPC.md", and "PDInstTrainTuring.md" files in "tutorials" folder. This infomation is also included in the project website at [▶️ Project Website](https://bijeshshrestha.github.io/ML_GroupProject/)
     
 ### Prospectus - Project Proposal
 
-    The prospectus is included in the repository as "Prospectus_project_proposal.pdf" file in "docs" folder.
+The prospectus is included in the repository as "Prospectus_project_proposal.pdf" file in "docs" folder.
 
 
 ### Project Website

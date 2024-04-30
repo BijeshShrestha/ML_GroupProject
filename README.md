@@ -3,13 +3,15 @@
 ## Git repository, prospectus, final project website, and webapp
 ===
 
-### Git Repository: 
+### Git Repository and weights: 
 
 - [Project Submission - Webapp and Weight](https://github.com/BijeshShrestha/ML_GroupProject) is used for demo and submission. This repository includes the webapp and the model weights for the webapp. 
 
 - [Original CNN Repository](https://github.com/funzi-son/plant_pathology_dl) is the original repository from which the project was forked. 
 
 - [Modified CNN Repository](https://github.com/ivanlimwc/plant_pathology_dl) is used for training and testing. This repository was forked from the original repository and modified to streamline the training process and to get the weights for the webapp.
+
+- [Trained weights](https://wpi0-my.sharepoint.com/:f:/g/personal/bshrestha_wpi_edu/EqqXYSaN58tIrYp67i3R3wcBmbLEs6XdS0tb2pAe8dF0LQ?e=zt5yNu) are stored in the shared drive. The weights are used for the webapp.Please download it and place it in ML_GroupProject folder and modify the path if needed in the classify.py file.
 
 
 ### Tutorial on how to run the project locally and on the HPC 

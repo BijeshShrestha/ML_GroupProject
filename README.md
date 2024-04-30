@@ -5,9 +5,15 @@
 
 ### Git Repository: 
 
-- [Project Submission](https://github.com/BijeshShrestha/ML_GroupProject) used for demo and user testing
+- [Project Submission - Webapp and Weight](https://github.com/BijeshShrestha/ML_GroupProject) used for demo and submission. This repository includes the webapp and the model weights for the webapp. 
+
+- [Original CNN Repository](https://github.com/funzi-son/plant_pathology_dl) original repository from which the project was forked. 
+
+- [Modified CNN Repository](https://github.com/ivanlimwc/plant_pathology_dl) used for training and testing. This repository was forked from the original repository and modified to streamline the training process and to get the weights for the webapp.
+
 
 ### Tutorial on how to run the project locally and on the HPC 
+
     Tutorial is included in the repository as "PDInstTrainLocal.md", "PDInstTrainHPC.md", and "PDInstTrainTuring.md" files in "tutorials" folder. This infomation is also included in the project website at [▶️ Project Website](https://bijeshshrestha.github.io/ML_GroupProject/)
     
 ### Prospectus - Project Proposal

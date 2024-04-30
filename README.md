@@ -5,11 +5,11 @@
 
 ### Git Repository: 
 
-- [Project Submission - Webapp and Weight](https://github.com/BijeshShrestha/ML_GroupProject) used for demo and submission. This repository includes the webapp and the model weights for the webapp. 
+- [Project Submission - Webapp and Weight](https://github.com/BijeshShrestha/ML_GroupProject) is used for demo and submission. This repository includes the webapp and the model weights for the webapp. 
 
-- [Original CNN Repository](https://github.com/funzi-son/plant_pathology_dl) original repository from which the project was forked. 
+- [Original CNN Repository](https://github.com/funzi-son/plant_pathology_dl) is the original repository from which the project was forked. 
 
-- [Modified CNN Repository](https://github.com/ivanlimwc/plant_pathology_dl) used for training and testing. This repository was forked from the original repository and modified to streamline the training process and to get the weights for the webapp.
+- [Modified CNN Repository](https://github.com/ivanlimwc/plant_pathology_dl) is used for training and testing. This repository was forked from the original repository and modified to streamline the training process and to get the weights for the webapp.
 
 
 ### Tutorial on how to run the project locally and on the HPC 
@@ -29,7 +29,7 @@ The project website is hosted at [▶️ Project Website](https://bijeshshrestha
 
 ### Plant Disease Prediction Webapp
 
-The tool can be found here at [▶ webapp](https://demo.shrestha.club/). If the tool is not working, please follow the instructions below to run the project locally. You will need to have the openai api key to run the project locally.
+The tool can be found here at [▶ webapp](https://demoapp.shrestha.club/). If the link is not working, please follow the instructions on the [Project Website](https://bijeshshrestha.github.io/ML_GroupProject/) to run the project locally. You will need to have the openai api key to run the project locally.
 
 Webapp screenshot:
 

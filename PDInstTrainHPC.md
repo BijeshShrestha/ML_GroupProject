@@ -63,10 +63,10 @@ the name of the parent directory of the repository throughout this document.
 ## Download dataset PlantDoc_original
 
     git clone https://github.com/pratikkayal/PlantDoc-Dataset
+    mkdir /home/user/git/plant_pathology_dl/Datasets
     mv PlantDoc-Dataset /home/user/git/plant_pathology_dl/Datasets/PlantDoc_original
-
-Please remove the folder Tomato two spotted spider mites leaf which has only
-two pictures in the train folder first.
+    cd /home/user/git/test/plant_pathology_dl/Datasets/PlantDoc_original/train
+    rm -r 'Tomato two spotted spider mites leaf'
 
 Please keep the test folder and the train folder. Erase the other files.
 

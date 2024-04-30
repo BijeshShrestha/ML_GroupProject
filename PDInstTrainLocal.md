@@ -6,7 +6,6 @@ title:
 --- -->
 
 Please note that this tutorial is for a Linux environment only
-(Turing is a local environment, but your local machine may not be).
 However, if you are familiar with Windows or Mac command-line,
 then adapting these instructions should not be too much trouble.
 
@@ -73,10 +72,10 @@ Execute the following commands:
 ## Download dataset PlantDoc_original
 
     git clone https://github.com/pratikkayal/PlantDoc-Dataset
-    mv PlantDoc-Dataset /home/user/git/plant_pathology_dl/Datasets/PlantDoc_original
-
-Please remove the folder Tomato two spotted spider mites leaf which has only
-two pictures in the train folder first.
+    mkdir /home/user/git/plant_pathology_dl/Datasets
+    mv PlantDoc-Dataset PlantDoc_original
+    cd /home/user/git/test/plant_pathology_dl/Datasets/PlantDoc_original/train
+    rm -r 'Tomato two spotted spider mites leaf'
 
 Please keep the test folder and the train folder. Erase the other files.
 

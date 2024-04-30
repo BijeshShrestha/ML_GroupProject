@@ -6,7 +6,7 @@ title:
 --- -->
 
 Please note that this tutorial is for a Linux environment only 
-(Turing is a local environment, but your local machine may not be). 
+(Turing is a Linux environment, but your local machine may not be). 
 However, if you are familiar with Windows or Mac command-line, 
 then adapting these instructions should not be too much trouble.
 
@@ -60,11 +60,11 @@ the name of the parent directory of this repository throughout this document.
 ## Download dataset PlantDoc_original
 
     git clone https://github.com/pratikkayal/PlantDoc-Dataset
+    mkdir /home/user/git/plant_pathology_dl/Datasets
     mv PlantDoc-Dataset /home/user/git/plant_pathology_dl/Datasets/PlantDoc_original
-
-Please remove the folder Tomato two spotted spider mites leaf which has only
-two pictures in the train folder first.
-
+    cd /home/user/git/test/plant_pathology_dl/Datasets/PlantDoc_original/train
+    rm -r 'Tomato two spotted spider mites leaf'
+    
 Please keep the test folder and the train folder. Erase the other files.
 
 # Train Model on Turing
@@ -99,13 +99,13 @@ The following instructions are to run a batch job in turing.wpi.edu.
 The turing.wpi.edu shell script to submit training
 as a batch job is as follows:
 
-    \#!/bin/bash
-    \#SBATCH --mem=40g
-    \#SBATCH -J "dfmp539"
-    \#SBATCH -p short
-    \#SBATCH -t 12:00:00
-    \#SBATCH -C A100
-    \#SBATCH --gres=gpu:2
+    #!/bin/bash
+    #SBATCH --mem=40g
+    #SBATCH -J "dfmp539"
+    #SBATCH -p short
+    #SBATCH -t 12:00:00
+    #SBATCH -C A100
+    #SBATCH --gres=gpu:2
     module load python/3.7.13/
     module load cuda
     module load cuda11.2/blas
@@ -115,17 +115,21 @@ as a batch job is as follows:
     conda activate my_env
     python /home/user/git/plant_pathology_dl/main.py
 
-Save the above script into a .sh file. For the purposes of these instructions,
-we'll call it my_script.sh
+Save the above script into a .sh file.
+
+For the purposes of these instructions, we'll call it /home/user/my_script.sh
 
 Then you run:
 
-    $ sbatch my_script.sh
+    cd /home/user
+    conda deactivate
+    sbatch my_script.sh
 
-Submitted batch job 999999
+You should get output like the following:
+  Submitted batch job <batch job id>
 
 The output of the script will be sent to a slurm output file. This file is
-called slurm-<batch job id>.out, or, in the above case, slurm-999999.out.
+called slurm-<batch job id>.out
 
 ## Performance metrics and Weights
 

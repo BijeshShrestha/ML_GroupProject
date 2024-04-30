@@ -1,7 +1,7 @@
-Final Project - Plant Disease Prediction  
+# Final Project - Plant Disease Prediction  
 ===
-# Git repository, prospectus, Project screencast, and final project website 
-
+## Git repository, prospectus, final project website, and webapp
+===
 ### Git Repository: 
 
 - [Project Submission](https://github.com/BijeshShrestha/ML_GroupProject) used for demo and user testing

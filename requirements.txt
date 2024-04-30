@@ -1,3 +1,5 @@
+# Follow the steps on the project website to properly setup the environment
+
 python
 streamlit
 os

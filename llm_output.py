@@ -38,8 +38,5 @@ def handle_input(species, disease):
     Write the output as strings that can be passed for output on a UI using Python libraries.'''
     openai_api_key = load_api_key()
     input_text = f"Plant is {species} and the disease is {disease}"
-    if openai_api_key is None or openai_api_key == "":
-        response = input_text
-    else:
-        response = ask_question(openai_api_key, input_text, instructions)
+    response = ask_question(openai_api_key, input_text, instructions)
     return response

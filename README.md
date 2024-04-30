@@ -29,7 +29,7 @@ The project website is hosted at [▶️ Project Website](https://bijeshshrestha
 
 ### Plant Disease Prediction Webapp
 
-The tool can be found here at [▶ webapp](https://demoapp.shrestha.club/). If the link is not working, please follow the instructions on the [Project Website](https://bijeshshrestha.github.io/ML_GroupProject/) to run the project locally. You will need to have the openai api key to run the project locally.
+The tool can be found here at [▶ webapp](https://demoapp.shrestha.club/). If the link is not working, please follow the instructions on the [Project Website](https://bijeshshrestha.github.io/ML_GroupProject/) or follow the guide in "tutorials" folder in this repository to run the project locally. You will need to have the openai api key to run the project locally.
 
 Webapp screenshot:
 

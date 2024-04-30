@@ -2,9 +2,13 @@
 ===
 ## Git repository, prospectus, final project website, and webapp
 ===
+
 ### Git Repository: 
 
 - [Project Submission](https://github.com/BijeshShrestha/ML_GroupProject) used for demo and user testing
+
+### Tutorial on how to run the project locally and on the HPC 
+    Tutorial is included in the repository as "PDInstTrainLocal.md", "PDInstTrainHPC.md", and "PDInstTrainTuring.md" files in "tutorials" folder. This infomation is also included in the project website at [▶️ Project Website](https://bijeshshrestha.github.io/ML_GroupProject/)
     
 ### Prospectus - Project Proposal
 

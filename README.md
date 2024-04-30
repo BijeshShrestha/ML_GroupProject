@@ -21,4 +21,8 @@ The project website is hosted at [▶️ Project Website](https://bijeshshrestha
 
 The tool can be found here at [▶ webapp](https://demo.shrestha.club/). If the tool is not working, please follow the instructions below to run the project locally. You will need to have the openai api key to run the project locally.
 
+Webapp screenshot:
+
+![webapp](webapp.png)
+
 

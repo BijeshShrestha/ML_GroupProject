@@ -134,7 +134,7 @@ Now copy the weights file to your home directory into a much shorter file name.
 Although you can place it anywhere, and use any file name you wish, 
 this tutorial will be easier to follow if you do it following this example:
 
-    cp /home/user/git/plant_pathology_dl/saverun/PlantDoc_original_new_model/PlantDoc_original_new_model/model_save/Inception/new_model\_\_\_No_9/model_0.5067fig_size_256/PlantDoc_original_new_model_Inception_multi_tasks.h5 /home/user/pd_weights.h5
+    cp /home/user/git/plant_pathology_dl/saverun/PlantDoc_original_new_model/PlantDoc_original_new_model/model_save/Inception/new_model___No_9/model_0.5067fig_size_256/PlantDoc_original_new_model_Inception_multi_tasks.h5 /home/user/pd_weights.h5
 
 # Setup Prediction / Local Machine
 
@@ -159,8 +159,11 @@ document.
 
     conda create -n web_env python=3.7
     conda activate web_env
+    conda install tensorflow
     conda install streamlit
     conda install openai
+    conda install python-dotenv
+    conda install opencv
 
 ## Clone Repository
 

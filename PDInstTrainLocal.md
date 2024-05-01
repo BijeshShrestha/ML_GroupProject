@@ -127,7 +127,7 @@ For this document's global variable settings (see main.py setup), the file speci
 
 This file specification was built from those global variables. If {obj} is the value of the global variable obj, and other variables, like {item}, are also the value of the global variable item, then the file specification can be encoded as:
 
-/home/user/git/plant*pathology_dl/saverun/{item}*{obj}/{item}\_{obj}/model*save/{model_name}/{obj}*\_\_No\_{time}/model*0.5067fig_size_256/{item}*{obj}\_{model_name}\_multi_tasks.h5
+/home/user/git/plantpathology_dl/saverun/{item}_{obj}/{item}\_{obj}/model_save/{model_name}/{obj}\_\_\_No\_{time}/model_0.5067fig_size_256/{item}_{obj}\_{model_name}\_multi_tasks.h5
 
 Now copy the weights file (.h5) from the above into the /home/user/git/ML_GroupProject directory. Give it a much shorter name.
 
